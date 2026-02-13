@@ -2,7 +2,7 @@ import  {Employee}  from "./Employee.js";
 import { Students } from "./Student.js";
 import { Courses } from "./Courses.js";
 import { Instructors } from "./Instructor.js";
-import searching_using_anyColumn from "../Functional component/Search.js";
+// import searching_using_anyColumn from "../Functional component/Search.js";
 
 let employee = new Employee()
 let dataEmployee =await employee.fetchData()
@@ -18,7 +18,22 @@ entity.forEach((ent)=>{
         console.log(e.target.innerHTML)
         let showTableOfEntity = e.target.innerHTML;
         if(showTableOfEntity === 'Employee'){
-            EntityTable.innerHTML = `
+           reanderData_Employee()
+        //    searching_using_anyColumn(dataEmployee);
+        }
+          else if(showTableOfEntity === 'Instructor'){
+            EntityTable.innerHTML=''
+               reanderData_Instructor()     
+          }
+            
+    })
+})
+
+
+
+
+function reanderData_Employee() {
+     EntityTable.innerHTML = `
                   <div class="header">
                             <h3>ID</h3>
                             <h3>Name</h3>
@@ -41,11 +56,10 @@ entity.forEach((ent)=>{
                     </div>
               `
            }
-        //    searching_using_anyColumn(dataEmployee);
-        }
-          else if(showTableOfEntity === 'Instructor'){
-            EntityTable.innerHTML=''
-            EntityTable.innerHTML = `
+}
+
+function reanderData_Instructor(){
+     EntityTable.innerHTML = `
                   <div class="header">
                             <h3>ID</h3>
                             <h3>Name</h3>
@@ -68,8 +82,4 @@ entity.forEach((ent)=>{
                     </div>
               `
            };
-                
-          }
-            
-    })
-})
+}
