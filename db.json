@@ -1,0 +1,586 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Omar Hassan",
+      "email": "omar.hassan@university.edu",
+      "level": 1,
+      "advisorId": 3,
+      "courses": [1, 2, 3]
+    },
+    {
+      "id": 2,
+      "name": "Salma Youssef",
+      "email": "salma.youssef@university.edu",
+      "level": 2,
+      "advisorId": 5,
+      "courses": [2, 3, 4]
+    },
+    {
+      "id": 3,
+      "name": "Ahmed Mahmoud",
+      "email": "ahmed.mahmoud@university.edu",
+      "level": 3,
+      "advisorId": 1,
+      "courses": [3, 4, 5]
+    },
+    {
+      "id": 4,
+      "name": "Nour El‑Din Khaled",
+      "email": "nour.khaled@university.edu",
+      "level": 4,
+      "advisorId": 7,
+      "courses": [4, 5, 6]
+    },
+    {
+      "id": 5,
+      "name": "Mariam Adel",
+      "email": "mariam.adel@university.edu",
+      "level": 1,
+      "advisorId": 10,
+      "courses": [5, 6, 7]
+    },
+    {
+      "id": 6,
+      "name": "Youssef Samir",
+      "email": "youssef.samir@university.edu",
+      "level": 2,
+      "advisorId": 12,
+      "courses": [6, 7, 8]
+    },
+    {
+      "id": 7,
+      "name": "Habiba Mohamed",
+      "email": "habiba.mohamed@university.edu",
+      "level": 3,
+      "advisorId": 8,
+      "courses": [7, 8, 9]
+    },
+    {
+      "id": 8,
+      "name": "Mostafa Saeed",
+      "email": "mostafa.saeed@university.edu",
+      "level": 4,
+      "advisorId": 15,
+      "courses": [8, 9, 10]
+    },
+    {
+      "id": 9,
+      "name": "Hana Ibrahim",
+      "email": "hana.ibrahim@university.edu",
+      "level": 1,
+      "advisorId": 2,
+      "courses": [9, 10, 11]
+    },
+    {
+      "id": 10,
+      "name": "Farah Tarek",
+      "email": "farah.tarek@university.edu",
+      "level": 2,
+      "advisorId": 6,
+      "courses": [10, 11, 12]
+    },
+
+    {
+      "id": 11,
+      "name": "Kareem Lotfy",
+      "email": "kareem.lotfy@university.edu",
+      "level": 3,
+      "advisorId": 9,
+      "courses": [11, 12, 13]
+    },
+    {
+      "id": 12,
+      "name": "Rana Sherif",
+      "email": "rana.sherif@university.edu",
+      "level": 4,
+      "advisorId": 14,
+      "courses": [12, 13, 14]
+    },
+    {
+      "id": 13,
+      "name": "Ola Fathy",
+      "email": "ola.fathy@university.edu",
+      "level": 1,
+      "advisorId": 11,
+      "courses": [13, 14, 15]
+    },
+    {
+      "id": 14,
+      "name": "Basma Gamil",
+      "email": "basma.gamil@university.edu",
+      "level": 2,
+      "advisorId": 4,
+      "courses": [14, 15, 16]
+    },
+    {
+      "id": 15,
+      "name": "Mohamed Walid",
+      "email": "mohamed.walid@university.edu",
+      "level": 3,
+      "advisorId": 16,
+      "courses": [15, 16, 17]
+    },
+
+    {
+      "id": 16,
+      "name": "Yara Hany",
+      "email": "yara.hany@university.edu",
+      "level": 4,
+      "advisorId": 18,
+      "courses": [16, 17, 18]
+    },
+    {
+      "id": 17,
+      "name": "Ali Mostafa",
+      "email": "ali.mostafa@university.edu",
+      "level": 1,
+      "advisorId": 13,
+      "courses": [17, 18, 19]
+    },
+    {
+      "id": 18,
+      "name": "Dina Fares",
+      "email": "dina.fares@university.edu",
+      "level": 2,
+      "advisorId": 17,
+      "courses": [18, 19, 20]
+    },
+    {
+      "id": 19,
+      "name": "Sarah Adel",
+      "email": "sarah.adel@university.edu",
+      "level": 3,
+      "advisorId": 19,
+      "courses": [1, 19, 20]
+    },
+    {
+      "id": 20,
+      "name": "Iyad Nasser",
+      "email": "iyad.nasser@university.edu",
+      "level": 4,
+      "advisorId": 20,
+      "courses": [1, 2, 20]
+    },
+
+    {
+      "id": 21,
+      "name": "Leen Omar",
+      "email": "leen.omar@university.edu",
+      "level": 1,
+      "advisorId": 3,
+      "courses": [1, 2, 3]
+    },
+    {
+      "id": 22,
+      "name": "Hazem Amin",
+      "email": "hazem.amin@university.edu",
+      "level": 2,
+      "advisorId": 5,
+      "courses": [2, 3, 4]
+    },
+    {
+      "id": 23,
+      "name": "Jana Helmy",
+      "email": "jana.helmy@university.edu",
+      "level": 3,
+      "advisorId": 1,
+      "courses": [3, 4, 5]
+    },
+    {
+      "id": 24,
+      "name": "Khaled Fady",
+      "email": "khaled.fady@university.edu",
+      "level": 4,
+      "advisorId": 7,
+      "courses": [4, 5, 6]
+    },
+    {
+      "id": 25,
+      "name": "Donia Ziad",
+      "email": "donia.ziad@university.edu",
+      "level": 1,
+      "advisorId": 10,
+      "courses": [5, 6, 7]
+    },
+
+    {
+      "id": 26,
+      "name": "Ahmed Younis",
+      "email": "ahmed.younis@university.edu",
+      "level": 2,
+      "advisorId": 12,
+      "courses": [6, 7, 8]
+    },
+    {
+      "id": 27,
+      "name": "Nadeen Rami",
+      "email": "nadeen.rami@university.edu",
+      "level": 3,
+      "advisorId": 8,
+      "courses": [7, 8, 9]
+    },
+    {
+      "id": 28,
+      "name": "Omar Ezzat",
+      "email": "omar.ezzat@university.edu",
+      "level": 4,
+      "advisorId": 15,
+      "courses": [8, 9, 10]
+    },
+    {
+      "id": 29,
+      "name": "Laila Hamdy",
+      "email": "laila.hamdy@university.edu",
+      "level": 1,
+      "advisorId": 2,
+      "courses": [9, 10, 11]
+    },
+    {
+      "id": 30,
+      "name": "Hussein Wael",
+      "email": "hussein.wael@university.edu",
+      "level": 2,
+      "advisorId": 6,
+      "courses": [10, 11, 12]
+    },
+
+    {
+      "id": 31,
+      "name": "Nourhan Lotfy",
+      "email": "nourhan.lotfy@university.edu",
+      "level": 3,
+      "advisorId": 9,
+      "courses": [11, 12, 13]
+    },
+    {
+      "id": 32,
+      "name": "Yasmin Tamer",
+      "email": "yasmin.tamer@university.edu",
+      "level": 4,
+      "advisorId": 14,
+      "courses": [12, 13, 14]
+    },
+    {
+      "id": 33,
+      "name": "Abdelrahman Fares",
+      "email": "abdelrahman.fares@university.edu",
+      "level": 1,
+      "advisorId": 11,
+      "courses": [13, 14, 15]
+    },
+    {
+      "id": 34,
+      "name": "Noha Nabil",
+      "email": "noha.nabil@university.edu",
+      "level": 2,
+      "advisorId": 4,
+      "courses": [14, 15, 16]
+    },
+    {
+      "id": 35,
+      "name": "Malak Saber",
+      "email": "malak.saber@university.edu",
+      "level": 3,
+      "advisorId": 16,
+      "courses": [15, 16, 17]
+    },
+
+    {
+      "id": 36,
+      "name": "Seif Yehia",
+      "email": "seif.yehia@university.edu",
+      "level": 4,
+      "advisorId": 18,
+      "courses": [16, 17, 18]
+    },
+    {
+      "id": 37,
+      "name": "Talia Jamal",
+      "email": "talia.jamal@university.edu",
+      "level": 1,
+      "advisorId": 13,
+      "courses": [17, 18, 19]
+    },
+    {
+      "id": 38,
+      "name": "Hassan Saber",
+      "email": "hassan.saber@university.edu",
+      "level": 2,
+      "advisorId": 17,
+      "courses": [18, 19, 20]
+    },
+    {
+      "id": 39,
+      "name": "Karim Shoukry",
+      "email": "karim.shoukry@university.edu",
+      "level": 3,
+      "advisorId": 19,
+      "courses": [1, 19, 20]
+    },
+    {
+      "id": 40,
+      "name": "Reem Tarek",
+      "email": "reem.tarek@university.edu",
+      "level": 4,
+      "advisorId": 20,
+      "courses": [1, 2, 20]
+    },
+
+    {
+      "id": 41,
+      "name": "Adel Sameh",
+      "email": "adel.sameh@university.edu",
+      "level": 1,
+      "advisorId": 3,
+      "courses": [1, 2, 3]
+    },
+    {
+      "id": 42,
+      "name": "Joudy Hassan",
+      "email": "joudy.hassan@university.edu",
+      "level": 2,
+      "advisorId": 5,
+      "courses": [2, 3, 4]
+    },
+    {
+      "id": 43,
+      "name": "Mostafa Fakhry",
+      "email": "mostafa.fakhry@university.edu",
+      "level": 3,
+      "advisorId": 1,
+      "courses": [3, 4, 5]
+    },
+    {
+      "id": 44,
+      "name": "Aya Selim",
+      "email": "aya.selim@university.edu",
+      "level": 4,
+      "advisorId": 7,
+      "courses": [4, 5, 6]
+    },
+    {
+      "id": 45,
+      "name": "Menna El‑Sherif",
+      "email": "menna.sherif@university.edu",
+      "level": 1,
+      "advisorId": 10,
+      "courses": [5, 6, 7]
+    },
+
+    {
+      "id": 46,
+      "name": "Ziad Adel",
+      "email": "ziad.adel@university.edu",
+      "level": 2,
+      "advisorId": 12,
+      "courses": [6, 7, 8]
+    },
+    {
+      "id": 47,
+      "name": "Shahd Rami",
+      "email": "shahd.rami@university.edu",
+      "level": 3,
+      "advisorId": 8,
+      "courses": [7, 8, 9]
+    },
+    {
+      "id": 48,
+      "name": "Hana Walid",
+      "email": "hana.walid@university.edu",
+      "level": 4,
+      "advisorId": 15,
+      "courses": [8, 9, 10]
+    },
+    {
+      "id": 49,
+      "name": "Omar Gamal",
+      "email": "omar.gamal@university.edu",
+      "level": 1,
+      "advisorId": 2,
+      "courses": [9, 10, 11]
+    },
+    {
+      "id": 50,
+      "name": "Nadine Moataz",
+      "email": "nadine.moataz@university.edu",
+      "level": 2,
+      "advisorId": 6,
+      "courses": [10, 11, 12]
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Introduction to Programming",
+      "creditHours": 3,
+      "instructorId": 1
+    },
+    {
+      "id": 2,
+      "title": "Object‑Oriented Programming",
+      "creditHours": 3,
+      "instructorId": 2
+    },
+    {
+      "id": 3,
+      "title": "Data Structures",
+      "creditHours": 3,
+      "instructorId": 3
+    },
+    {
+      "id": 4,
+      "title": "Algorithms",
+      "creditHours": 3,
+      "instructorId": 4
+    },
+    {
+      "id": 5,
+      "title": "Computer Architecture",
+      "creditHours": 3,
+      "instructorId": 5
+    },
+    {
+      "id": 6,
+      "title": "Operating Systems",
+      "creditHours": 3,
+      "instructorId": 6
+    },
+    {
+      "id": 7,
+      "title": "Database Systems",
+      "creditHours": 3,
+      "instructorId": 7
+    },
+    {
+      "id": 8,
+      "title": "Computer Networks",
+      "creditHours": 3,
+      "instructorId": 8
+    },
+    {
+      "id": 9,
+      "title": "Web Development",
+      "creditHours": 2,
+      "instructorId": 9
+    },
+    {
+      "id": 10,
+      "title": "Mobile App Development",
+      "creditHours": 2,
+      "instructorId": 10
+    },
+    {
+      "id": 11,
+      "title": "Software Engineering",
+      "creditHours": 3,
+      "instructorId": 11
+    },
+    {
+      "id": 12,
+      "title": "Cybersecurity Fundamentals",
+      "creditHours": 3,
+      "instructorId": 12
+    },
+    {
+      "id": 13,
+      "title": "Cloud Computing",
+      "creditHours": 3,
+      "instructorId": 13
+    },
+    {
+      "id": 14,
+      "title": "Artificial Intelligence",
+      "creditHours": 3,
+      "instructorId": 14
+    },
+    {
+      "id": 15,
+      "title": "Machine Learning",
+      "creditHours": 3,
+      "instructorId": 15
+    },
+    {
+      "id": 16,
+      "title": "Deep Learning",
+      "creditHours": 3,
+      "instructorId": 16
+    },
+    {
+      "id": 17,
+      "title": "Data Mining",
+      "creditHours": 2,
+      "instructorId": 17
+    },
+    {
+      "id": 18,
+      "title": "Parallel Computing",
+      "creditHours": 3,
+      "instructorId": 18
+    },
+    {
+      "id": 19,
+      "title": "Distributed Systems",
+      "creditHours": 3,
+      "instructorId": 19
+    },
+    {
+      "id": 20,
+      "title": "Human‑Computer Interaction",
+      "creditHours": 2,
+      "instructorId": 20
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Mr. Mostafa Nabil",
+      "role": "Registrar"
+    },
+    {
+      "id": 2,
+      "name": "Ms. Salma El‑Kady",
+      "role": "Admissions Officer"
+    },
+    {
+      "id": 3,
+      "name": "Mr. Mahmoud Fathi",
+      "role": "Finance Officer"
+    },
+    {
+      "id": 4,
+      "name": "Ms. Nourhan Saad",
+      "role": "HR Specialist"
+    },
+    {
+      "id": 5,
+      "name": "Ms. Dalia Gasser",
+      "role": "Student Affairs Officer"
+    },
+    {
+      "id": 6,
+      "name": "Mr. Ahmed Hosny",
+      "role": "Examinations Officer"
+    },
+    {
+      "id": 7,
+      "name": "Ms. Reham Ali",
+      "role": "Academic Advisor"
+    },
+    {
+      "id": 8,
+      "name": "Mr. Youssef Farid",
+      "role": "IT Support"
+    },
+    {
+      "id": 9,
+      "name": "Ms. Rana Samir",
+      "role": "Scholarships Coordinator"
+    },
+    {
+      "id": 10,
+      "name": "Mr. Hany Reda",
+      "role": "Internships & Industry Liaison"
+    }
+  ]
+}
