@@ -1,43 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Student Affairs</title>
-    <link rel="stylesheet" href="studentAffairs.css">
-</head>
+    <link rel="stylesheet" href="studentAffairs.css" />
+  </head>
 
-<body>
-
+  <body>
     <nav>
-        <ul>
-            <li>Show Students</li>
-            <li>Show Courses</li>
-            <li>Instructor</li>
-            <li>Employee</li>
-        </ul>
+      <ul>
+        <li>Show Students</li>
+        <li>Show Courses</li>
+        <li>Instructor</li>
+        <li>Employee</li>
+      </ul>
     </nav>
 
-    <br><br><br><br>
+    <br /><br /><br /><br />
     <section>
-        <sec class="forms">
-            <form action="">
-                <select name="Paginates" id="SelectPaginate">
-                    <option value="">10</option>
-                    <option value="">25</option>
-                    <option value="">50</option>
-                    <option value="">75</option>
-                    <option value="">100</option>
-                </select>
-                <label>Entries pre page</label>
-            </form>
-            <form action="">
-                <label for="">Search: </label>
-                <input type="search" name="" id="search_data">
-            </form>
-        </sec>
-        <br> <br>
-        <sec class="EntityTable">
-            <!-- <div class="header">
+      <sec class="forms">
+        <form action="">
+          <select name="Paginates" id="SelectPaginate">
+            <option value="">10</option>
+            <option value="">25</option>
+            <option value="">50</option>
+            <option value="">75</option>
+            <option value="">100</option>
+          </select>
+          <label>Entries pre page</label>
+        </form>
+        <form action="">
+          <label for="">Search: </label>
+          <input type="search" name="" id="search_data" />
+        </form>
+      </sec>
+      <br />
+      <br />
+      <sec class="EntityTable">
+        <!-- <div class="header">
                 <h3>stID</h3>
                 <h3>stName</h3>
                 <h3>Age</h3>
@@ -45,7 +44,6 @@
                 <h3>advisorId</h3>
                 <h3>Edit</h3>
                 <h3>Delete</h3>
-
             </div>
             <div class="content">
                 <p>st1</p>
@@ -66,25 +64,49 @@
                 <input type="button" value="Delete"
                     style=" background-color: #042d3a;color: white; border: none; border-radius: 3px;">
             </div> -->
-        </sec>
+      </sec>
     </section>
-    <br><br>
+    <br /><br />
     <section class="sec2">
-        <p>Showing 1 to 10 of 50 entries</p>
-        <form action="">
-            <input type="button" value="Previous"
-                style=" background-color: #11404e;color: white; border: none; border-radius: 3px;">
-            <input type="button" value="Next"
-                style=" background-color: #11404e;color: white; border: none; border-radius: 3px;">
-        </form>
+      <p>Showing 1 to 10 of 50 entries</p>
+      <form action="">
+        <input
+          type="button"
+          value="Previous"
+          style="
+            background-color: #11404e;
+            color: white;
+            border: none;
+            border-radius: 3px;
+          "
+        />
+        <input
+          type="button"
+          value="Next"
+          style="
+            background-color: #11404e;
+            color: white;
+            border: none;
+            border-radius: 3px;
+          "
+        />
+      </form>
     </section>
 
     <section class="AddBTN">
-        <input type="button" value="Add New Student"
-            style="height: 30px; width: 150px; background-color: #6cbdc1; border: none; border-radius: 5px;">
+      <input
+        type="button"
+        value="Add New Student"
+        style="
+          height: 30px;
+          width: 150px;
+          background-color: #6cbdc1;
+          border: none;
+          border-radius: 5px;
+        "
+      />
     </section>
 
     <script src="./Classes Modules/allModule.js" type="module"></script>
-</body>
-
+  </body>
 </html>

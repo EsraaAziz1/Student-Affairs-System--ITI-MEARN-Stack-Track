@@ -1,19 +1,16 @@
 import { Employee } from "./Employee.js";
 
-export class Students extends Employee{
-   
-   async fetchData(){
-       await  fetch('http://localhost:3000/students')
-         .then(res => res.json())
-         .then(res =>  
-              console.log(res)
-         )
+export class Students extends Employee {
+  async fetchData() {
+    try {
+      return await fetch("http://localhost:3000/students").then((response) => {
+        return response.json();
+      });
+    } catch (error) {
+      console.log("ERROR with catch", error);
     }
+  }
 }
 
-
-let std1 = new Students()
-console.log(std1.fetchData())
-
-
-
+let std1 = new Students();
+console.log(std1.fetchData());
