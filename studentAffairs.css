@@ -38,10 +38,10 @@ section{
 }
 section div{ 
     display: grid;
-    grid-template-columns: repeat(7, 70px);
+    grid-template-columns: 10px repeat(6, 2fr);
     grid-template-rows: repeat(7 ,auto);
     justify-content: space-between;
-    column-gap: 25px;
+    column-gap: 30px;
     row-gap: 3px;
     background-color: #e5ecf3;
     padding: 3px;

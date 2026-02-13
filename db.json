@@ -583,4 +583,108 @@
       "role": "Internships & Industry Liaison"
     }
   ]
+  ,
+  
+  "instructors": [
+    {
+      "id": 1,
+      "name": "Dr. Hany El‑Sayed",
+      "department": "Computer Science"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Rania Abdallah",
+      "department": "Software Engineering"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Tarek Naguib",
+      "department": "Computer Science"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Maha Fawzy",
+      "department": "Computer Science"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Amr El‑Gendy",
+      "department": "Computer Engineering"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Sarah El‑Masry",
+      "department": "Computer Science"
+    },
+    {
+      "id": 7,
+      "name": "Dr. Sherif Kamel",
+      "department": "Information Systems"
+    },
+    {
+      "id": 8,
+      "name": "Dr. Laila Hassan",
+      "department": "Networks & Security"
+    },
+    {
+      "id": 9,
+      "name": "Dr. Karim El‑Daly",
+      "department": "Web & Mobile"
+    },
+    {
+      "id": 10,
+      "name": "Dr. Heba Mostafa",
+      "department": "Web & Mobile"
+    },
+    {
+      "id": 11,
+      "name": "Dr. Ahmed Farouk",
+      "department": "Software Engineering"
+    },
+    {
+      "id": 12,
+      "name": "Dr. Mona Abdelrahman",
+      "department": "Cybersecurity"
+    },
+    {
+      "id": 13,
+      "name": "Dr. Youssef Samir",
+      "department": "Cloud & Systems"
+    },
+    {
+      "id": 14,
+      "name": "Dr. Nourhan Ali",
+      "department": "Artificial Intelligence"
+    },
+    {
+      "id": 15,
+      "name": "Dr. Walid Saber",
+      "department": "Machine Learning"
+    },
+    {
+      "id": 16,
+      "name": "Dr. Rania Fathy",
+      "department": "Machine Learning"
+    },
+    {
+      "id": 17,
+      "name": "Dr. Omar Khalil",
+      "department": "Data Science"
+    },
+    {
+      "id": 18,
+      "name": "Dr. Seif El‑Din",
+      "department": "High‑Performance Computing"
+    },
+    {
+      "id": 19,
+      "name": "Dr. Reem Abdelaziz",
+      "department": "Distributed Systems"
+    },
+    {
+      "id": 20,
+      "name": "Dr. Hazem Youssef",
+      "department": "Human‑Computer Interaction"
+    }
+  ]
 }
