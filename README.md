@@ -1,0 +1,1 @@
+This repository contains a system designed to streamline and digitize student affairs processes within an academic institution. It provides tools for managing student records, tracking academic progress, and supporting administrative tasks. 

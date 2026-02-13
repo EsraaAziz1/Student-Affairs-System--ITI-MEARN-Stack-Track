@@ -41,7 +41,7 @@ entity.forEach((ent)=>{
                     </div>
               `
            }
-           searching_using_anyColumn(dataEmployee);
+        //    searching_using_anyColumn(dataEmployee);
         }
           else if(showTableOfEntity === 'Instructor'){
             EntityTable.innerHTML=''
