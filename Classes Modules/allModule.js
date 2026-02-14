@@ -1,4 +1,5 @@
 import { Employee } from "./Employee.js";
+import { Employee } from "./Employee.js";
 import { Students } from "./Student.js";
 import { Courses } from "./Courses.js";
 import { Instructors } from "./Instructor.js";
@@ -54,7 +55,7 @@ function reanderData_Employee() {
                         <p>${dataEmployee[index].id}</p>
                         <p>${dataEmployee[index].name}</p>
                         <p>${dataEmployee[index].role}</p>
-                        <input type="button" value="Edit"
+                        <input type="button" value="Edit" 
                             style=" background-color: #05498d; color: white; border: none; border-radius: 3px;">
                         <input type="button" value="Delete"
                             style=" background-color: #042d3a;color: white; border: none; border-radius: 3px;">

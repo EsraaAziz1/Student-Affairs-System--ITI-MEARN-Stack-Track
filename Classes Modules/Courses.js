@@ -13,24 +13,6 @@ export class Courses extends Students {
     }
   }
 
-  //    async  CoursesName(stdArray){
-  //    await stdArray.forEach((std)=>{
-  //           let crsStd = std.courses;
-  //           console.log(crsStd)
-  //         //   console.log(this)
-  //            crsStd.forEach(async (Idcrs)=>{
-  //               await this.getName_ofCourses(Idcrs)
-
-  //           })
-  //     })
-  // }
-  // async CoursesName(student) {
-  //   let crsStd = student.courses;
-  //   console.log(crsStd);
-  //   crsStd.forEach(async (Idcrs) => {
-  //     await this.getName_ofCourses(Idcrs);
-  //   });
-  // }
 }
 
 let crs1 = new Courses();
