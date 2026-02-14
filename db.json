@@ -535,7 +535,7 @@
     {
       "id": 1,
       "name": "Mr. Mostafa Nabil",
-      "role": "Registrar"
+      "role": "Instructor"
     },
     {
       "id": 2,
@@ -545,42 +545,92 @@
     {
       "id": 3,
       "name": "Mr. Mahmoud Fathi",
-      "role": "Finance Officer"
+      "role": "Student Affairs Admin"
     },
     {
       "id": 4,
       "name": "Ms. Nourhan Saad",
-      "role": "HR Specialist"
+      "role": "Instructor"
     },
     {
       "id": 5,
       "name": "Ms. Dalia Gasser",
-      "role": "Student Affairs Officer"
+      "role": "Student Affairs Admin"
     },
     {
       "id": 6,
       "name": "Mr. Ahmed Hosny",
-      "role": "Examinations Officer"
+      "role": "Instructor"
     },
     {
       "id": 7,
       "name": "Ms. Reham Ali",
-      "role": "Academic Advisor"
+      "role": "Graduate Studies Admin"
     },
     {
       "id": 8,
       "name": "Mr. Youssef Farid",
-      "role": "IT Support"
+      "role": "Student Affairs Admin"
     },
     {
       "id": 9,
       "name": "Ms. Rana Samir",
-      "role": "Scholarships Coordinator"
+      "role": "Instructor"
     },
     {
       "id": 10,
       "name": "Mr. Hany Reda",
-      "role": "Internships & Industry Liaison"
+      "role": "Graduate Studies Officer"
+    },
+    {
+      "id": 11,
+      "name": "Ms. Mariam Fouad",
+      "role": "Graduate Studies Admin"
+    },
+    {
+      "id": 12,
+      "name": "Mr. Tamer El‑Sharkawy",
+      "role": "Graduate Studies Admin"
+    },
+    {
+      "id": 13,
+      "name": "Ms. Sherine Rashed",
+      "role": "Instructor"
+    },
+    {
+      "id": 14,
+      "name": "Mr. Karim Nasr",
+      "role": "Instructor"
+    },
+    {
+      "id": 15,
+      "name": "Ms. Hana Abdelkarim",
+      "role": "Graduate Studies Officer"
+    },
+    {
+      "id": 16,
+      "name": "Mr. Ziad Yasser",
+      "role": "Instructor"
+    },
+    {
+      "id": 17,
+      "name": "Ms. Malak El‑Deeb",
+      "role": "Student Affairs Admin"
+    },
+    {
+      "id": 18,
+      "name": "Mr. Omar Fadel",
+      "role": "Student Affairs Admin"
+    },
+    {
+      "id": 19,
+      "name": "Ms. Noura Ayman",
+      "role": "Graduate Studies Officer"
+    },
+    {
+      "id": 20,
+      "name": "Mr. Adel Rashad",
+      "role": "Student Affairs Admin"
     }
   ],
 

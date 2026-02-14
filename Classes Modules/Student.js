@@ -12,5 +12,5 @@ export class Students extends Employee {
   }
 }
 
-let std1 = new Students();
-console.log(std1.fetchData());
+// let std1 = new Students();
+// console.log(std1.fetchData());

@@ -4,6 +4,7 @@
 }
 
 nav {
+  border-radius: 20px;
   width: 90%;
   margin: auto;
   background-color: rgb(211, 211, 211);
@@ -14,7 +15,11 @@ nav {
   row-gap: 5px;
   column-gap: 10px;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+
   /* gap:20px 20px; */
 }
 ul {
@@ -22,7 +27,8 @@ ul {
 }
 nav ul li {
   display: inline-block;
-  margin-left: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 nav ul li:hover {
   cursor: pointer;
@@ -70,5 +76,17 @@ section .forms,
   color: white;
   border: none;
   border-radius: 3px;
+}
+
+.header {
+  padding: 10px;
+  margin: auto;
+}
+.content {
+  padding: 10px;
+  margin: auto;
+}
+.content select {
+  width: 210px;
 }
 /* ////////////////section2//////////////// */

@@ -20,6 +20,12 @@ export class Employee {
       console.log("ERROR with catch", error);
     }
   }
+
+  getNameOfEmployee(id, data) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].id == id) return data[i].name;
+    }
+  }
 }
 // let emp1 = new Employee()
 // console.log(emp1.fetchData())
