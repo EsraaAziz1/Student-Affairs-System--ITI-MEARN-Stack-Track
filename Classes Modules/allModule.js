@@ -1,8 +1,8 @@
 import { Employee } from "./Employee.js";
-import { Employee } from "./Employee.js";
 import { Students } from "./Student.js";
 import { Courses } from "./Courses.js";
 import { Instructors } from "./Instructor.js";
+import { searching_by_employee, searching_by_Student, searching_by_Instructor ,searching_by_Courses} from "../Functional component/Search.js";
 
 let employee = new Employee();
 let dataEmployee = await employee.fetchData();
@@ -20,26 +20,36 @@ let entity = document.querySelectorAll("li");
 let EntityTable = document.querySelector(".EntityTable");
 
 entity.forEach((ent) => {
-  ent.addEventListener("click", function (e) {
-    console.log(e.target.innerHTML);
-    let showTableOfEntity = e.target.innerHTML;
-    if (showTableOfEntity === "Employees") {
-      reanderData_Employee();
-      //    searching_using_anyColumn(dataEmployee);
-    } else if (showTableOfEntity === "Instructors") {
-      EntityTable.innerHTML = "";
-      reanderData_Instructor();
-    } else if (showTableOfEntity === "Students") {
-      EntityTable.innerHTML = "";
-      renderStudentData();
-    } else if (showTableOfEntity === "Courses") {
-      EntityTable.innerHTML = "";
-      reanderData_Courses();
-    }
-  });
+    ent.addEventListener("click", function (e) {
+        console.log(e.target.innerHTML);
+        let showTableOfEntity = e.target.innerHTML;
+        if (showTableOfEntity === "Employees") {
+
+            reanderData_Employee();
+            searching_by_employee(dataEmployee);
+
+        } else if (showTableOfEntity === "Instructors") {
+
+            EntityTable.innerHTML = "";
+            reanderData_Instructor();
+            searching_by_Instructor(InstructorInfo);
+
+        } else if (showTableOfEntity === "Students") {
+
+            EntityTable.innerHTML = "";
+            renderStudentData();
+            searching_by_Student(StudentInfo, dataEmployee, dataCoures);
+
+        } else if (showTableOfEntity === "Courses") {
+
+            EntityTable.innerHTML = "";
+            reanderData_Courses();
+            searching_by_Courses(dataCoures , InstructorInfo);
+        }
+    });
 });
 function reanderData_Employee() {
-  EntityTable.innerHTML = `
+    EntityTable.innerHTML = `
                   <div class="header">
                             <h3>ID</h3>
                             <h3>Name</h3>
@@ -48,8 +58,8 @@ function reanderData_Employee() {
                             <h3>Delete</h3>
                     </div>
             `;
-  for (let index = 0; index < dataEmployee.length; index++) {
-    EntityTable.innerHTML += `
+    for (let index = 0; index < dataEmployee.length; index++) {
+        EntityTable.innerHTML += `
                     
                     <div class="content">
                         <p>${dataEmployee[index].id}</p>
@@ -61,11 +71,11 @@ function reanderData_Employee() {
                             style=" background-color: #042d3a;color: white; border: none; border-radius: 3px;">
                     </div>
               `;
-  }
+    }
 }
 
 function reanderData_Instructor() {
-  EntityTable.innerHTML = `
+    EntityTable.innerHTML = `
                   <div class="header">
                             <h3>ID</h3>
                             <h3>Name</h3>
@@ -74,8 +84,8 @@ function reanderData_Instructor() {
                             <h3>Delete</h3>
                     </div>
             `;
-  for (let index = 0; index < InstructorInfo.length; index++) {
-    EntityTable.innerHTML += `
+    for (let index = 0; index < InstructorInfo.length; index++) {
+        EntityTable.innerHTML += `
                     
                     <div class="content">
                         <p>${InstructorInfo[index].id}</p>
@@ -87,10 +97,10 @@ function reanderData_Instructor() {
                             style=" background-color: #042d3a;color: white; border: none; border-radius: 3px;">
                     </div>
               `;
-  }
+    }
 }
 function renderStudentData() {
-  EntityTable.innerHTML = `
+    EntityTable.innerHTML = `
                   <div class="header">
                             <h3>ID</h3>
                             <h3>Name</h3>
@@ -101,8 +111,8 @@ function renderStudentData() {
                             <h3>Delete</h3>
                     </div>
             `;
-  for (let i = 0; i < StudentInfo.length; i++) {
-    EntityTable.innerHTML += `
+    for (let i = 0; i < StudentInfo.length; i++) {
+        EntityTable.innerHTML += `
     <div class="content">
     <p>${StudentInfo[i].id}</p>
         <p>${StudentInfo[i].name}</p>
@@ -119,10 +129,10 @@ function renderStudentData() {
         <input type="button" class="edit" value="Edit"/>
         <input type="button" class="delete" value="Delete"/>
         </div>`;
-  }
+    }
 }
 async function reanderData_Courses() {
-  EntityTable.innerHTML = `
+    EntityTable.innerHTML = `
                   <div class="header">
                             <h3>ID</h3>
                             <h3>title</h3>
@@ -132,8 +142,8 @@ async function reanderData_Courses() {
                             <h3>Delete</h3>
                     </div>
             `;
-  for (let index = 0; index < dataCoures.length; index++) {
-    EntityTable.innerHTML += `
+    for (let index = 0; index < dataCoures.length; index++) {
+        EntityTable.innerHTML += `
                     
                     <div class="content">
                         <p>${dataCoures[index].id}</p>
@@ -146,5 +156,5 @@ async function reanderData_Courses() {
                             style=" background-color: #042d3a;color: white; border: none; border-radius: 3px;">
                     </div>
               `;
-  }
+    }
 }
