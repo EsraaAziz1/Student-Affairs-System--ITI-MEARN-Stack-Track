@@ -1,0 +1,86 @@
+.StudentForm {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 50px;
+  margin: auto;
+  width: 500px;
+  background-color: #e5ecf3;
+  display: none;
+}
+
+.EmployeeForm {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 50px;
+  margin: auto;
+  width: 500px;
+  background-color: #e5ecf3;
+}
+
+.CourseForm {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 50px;
+  margin: auto;
+  width: 500px;
+  background-color: #e5ecf3;
+}
+.InstructorForm {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 50px;
+  margin: auto;
+  width: 500px;
+  background-color: #e5ecf3;
+}
+
+.entity {
+  margin: 10px auto;
+  text-align: center;
+}
+.entity select {
+  padding: 5px;
+  border-radius: 10px;
+}
+h1 {
+  text-align: center;
+}
+.StudentForm label,
+.EmployeeForm label,
+.CourseForm label,
+.InstructorForm label {
+  display: block;
+  margin: 5px;
+}
+.StudentForm input,
+.EmployeeForm input,
+.CourseForm input,
+.InstructorForm input {
+  display: block;
+  width: 300px;
+}
+.StudentForm select {
+  padding: 3px;
+  margin: 5px;
+}
+.savedata {
+  width: 100px;
+  border-radius: 10px;
+  background-color: #6cbdc1;
+  border: none;
+  padding: 5px;
+  margin: 10px auto;
+}
+
+.StudentForm {
+  display: none;
+}
+.EmployeeForm {
+  display: none;
+}
+.CourseForm {
+  display: none;
+}
+.InstructorForm {
+  display: none;
+}

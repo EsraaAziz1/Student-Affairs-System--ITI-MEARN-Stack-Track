@@ -7,12 +7,23 @@ export class Courses extends Students {
     });
   }
 
-  getName_ofCourses(id, data) {
+  getNameofCoursesbyID(id, data) {
     for (let i = 0; i < data.length; i++) {
       if (data[i].id == id) return data[i].title;
     }
   }
-
+  getIdofCoursesbyTitle(title, data) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].title == title) return data[i].id;
+    }
+    throw new Error("Please select a Course");
+  }
+  duplicateID(id, data) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].id === id) throw new Error("duplicate IDs, please try again");
+    }
+    return id;
+  }
 }
 
 let crs1 = new Courses();

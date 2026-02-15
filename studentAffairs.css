@@ -65,6 +65,13 @@ section .forms,
 .forms select {
   width: 50px;
 }
+.addnew {
+  height: 30px;
+  width: 150px;
+  background-color: #6cbdc1;
+  border: none;
+  border-radius: 5px;
+}
 .edit {
   background-color: #05498d;
   color: white;
@@ -89,4 +96,5 @@ section .forms,
 .content select {
   width: 210px;
 }
+
 /* ////////////////section2//////////////// */

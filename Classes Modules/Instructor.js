@@ -17,6 +17,18 @@ export class Instructors extends Courses {
       if (data[i].id == id) return data[i].name;
     }
   }
+  getIdOfInstructorbyname(name, data) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].name == name) return data[i].id;
+    }
+    throw new Error("please enter the Instructor Name correctly");
+  }
+  duplicateID(id, data) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].id === id) throw new Error("duplicate IDs, please try again");
+    }
+    return id;
+  }
 }
 
 // let ins1 = new Instructors();

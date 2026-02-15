@@ -10,6 +10,12 @@ export class Students extends Employee {
       console.log("ERROR with catch", error);
     }
   }
+  duplicateID(id, data) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].id === id) throw new Error("duplicate IDs, please try again");
+    }
+    return id;
+  }
 }
 
 // let std1 = new Students();
