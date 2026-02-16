@@ -31,12 +31,7 @@ export class Instructors extends Courses {
     return id;
   }
 
-  getIDofInstructor(name, data) {
-    for (let index = 0; index < data.length; index++) {
-      if (data[index].name === name) return data[index].id;
-    }
-  }
-
+ 
   getIDCrsOfInstructor(dep, data) {
     for (let i = 0; i < data.length; i++) {
       if (data[i].department === dep) return data[i].id;
