@@ -72,7 +72,10 @@ section .forms,
   border: none;
   border-radius: 3px;
 }
-.delete {
+.deleteEmployee,
+.DeleteInstructor,
+.deleteStudent,
+.deleteCourse {
   background-color: #042d3a;
   color: white;
   border: none;

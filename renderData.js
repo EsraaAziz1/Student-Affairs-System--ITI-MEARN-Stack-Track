@@ -25,7 +25,7 @@ function reanderEmployeeData(EmployeeInfo) {
                         <p>${EmployeeInfo[index].name}</p>
                         <p>${EmployeeInfo[index].role}</p>
                         <input type="button" value="Edit" class ="edit">
-                        <input type="button" value="Delete" class="delete">
+                        <input type="button" value="Delete" class="deleteEmployee">
                     </div>`;
   }
 }
@@ -46,7 +46,7 @@ function reanderInstructorData(InstructorInfo) {
                         <p>${InstructorInfo[index].name}</p>
                         <p>${InstructorInfo[index].department}</p>
                         <input type="button" value="Edit" class ="edit">
-                        <input type="button" value="Delete" class="delete">
+                        <input type="button" value="Delete" class="DeleteInstructor">
                     </div>`;
   }
 }
@@ -67,16 +67,14 @@ function renderStudentData(StudentInfo, coursesInfo, EmployeeInfo) {
         <p>${StudentInfo[i].name}</p>
         <p>${StudentInfo[i].email}</p>
         <p>
-          <select name="course" >
+          <select name="course">
             <option value="default">Courses</option>
-            <option value="course1">${course.getNameofCoursesbyID(StudentInfo[i].courses[0], coursesInfo)}</option>
-            <option value="course2">${course.getNameofCoursesbyID(StudentInfo[i].courses[1], coursesInfo)}</option>
-            <option value="course3">${course.getNameofCoursesbyID(StudentInfo[i].courses[2], coursesInfo)}</option>
+            ${Coursesloop(StudentInfo[i], coursesInfo)}
           </select>
         </p>
-        <p>${employee.getNameOfEmployee(StudentInfo[i].advisorId, EmployeeInfo)}</p>
+       ${EmployeeValidation(StudentInfo[i], EmployeeInfo)}
         <input type="button" class="edit" value="Edit"/>
-        <input type="button" class="delete" value="Delete"/>
+        <input type="button" class="deleteStudent" value="Delete"/>
         </div>`;
   }
 }
@@ -95,9 +93,44 @@ function reanderCoursesData(coursesInfo) {
                         <p>${coursesInfo[index].id}</p>
                         <p>${coursesInfo[index].title}</p>
                         <p>${coursesInfo[index].creditHours}</p>
-                        <p>${Instructor.getNameOfInstructor(coursesInfo[index].instructorId, InstructorInfo)}</p>
+                        ${InstructorValidation(coursesInfo[index], InstructorInfo)}
                         <input type="button" value="Edit"  class ="edit">
-                        <input type="button" value="Delete" class ="delete"> </div>`;
+                        <input type="button" value="Delete" class ="deleteCourse"> </div>`;
+  }
+}
+
+function Coursesloop(index, coursesInfo) {
+  let option = "";
+  for (let j = 0; j < index.courses.length; j++) {
+    if (
+      course.getNameofCoursesbyID(index.courses[j], coursesInfo) != undefined
+    ) {
+      option += ` <option value="course${j}">
+      ${course.getNameofCoursesbyID(index.courses[j], coursesInfo)}
+    </option>`;
+    }
+  }
+  return option;
+}
+
+function InstructorValidation(index, InstructorInfo) {
+  let instructor = Instructor.getNameOfInstructor(
+    index.instructorId,
+    InstructorInfo,
+  );
+  if (instructor != undefined) {
+    return `<p>${instructor}</p>`;
+  } else {
+    return `<p>no Instructor Assigned</p>`;
+  }
+}
+
+function EmployeeValidation(index, EmployeeInfo) {
+  let Employee = employee.getNameOfEmployee(index.advisorId, EmployeeInfo);
+  if (Employee != undefined) {
+    return ` <p>${Employee}</p>`;
+  } else {
+    return `<p>no Employee Assigned</p>`;
   }
 }
 

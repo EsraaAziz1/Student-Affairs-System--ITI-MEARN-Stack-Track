@@ -184,12 +184,13 @@
       "id": "16",
       "name": "Yara Hany",
       "email": "yara.hany@university.edu",
+      "level": 4,
+      "advisorId": 18,
       "courses": [
-        "16",
-        "10",
-        "3"
-      ],
-      "advisorId": "18"
+        16,
+        17,
+        18
+      ]
     },
     {
       "id": "17",
@@ -337,13 +338,14 @@
     },
     {
       "id": "29",
-      "name": "Laila Ali",
-      "email": "laila.ali@university.edu",
-      "advisorId": "2",
+      "name": "Laila Hamdy",
+      "email": "laila.hamdy@university.edu",
+      "level": 1,
+      "advisorId": 2,
       "courses": [
-        2,
-        5,
-        15
+        9,
+        10,
+        11
       ]
     },
     {
@@ -566,12 +568,13 @@
       "id": "48",
       "name": "Hana Walid",
       "email": "hana.walid@university.edu",
+      "level": 4,
+      "advisorId": 15,
       "courses": [
-        "10",
-        "13",
-        "12"
-      ],
-      "advisorId": "15"
+        8,
+        9,
+        10
+      ]
     },
     {
       "id": "49",
@@ -589,12 +592,13 @@
       "id": "50",
       "name": "Nadine Moataz",
       "email": "nadine.moataz@university.edu",
+      "level": 2,
+      "advisorId": 6,
       "courses": [
-        "",
-        "",
-        ""
-      ],
-      "advisorId": "6"
+        10,
+        11,
+        12
+      ]
     }
   ],
   "courses": [
@@ -673,14 +677,14 @@
     {
       "id": "13",
       "title": "Cloud Computing",
-      "creditHours": "4",
-      "instructorId": "5"
+      "creditHours": 3,
+      "instructorId": 13
     },
     {
       "id": "14",
       "title": "Artificial Intelligence",
-      "creditHours": "5",
-      "instructorId": "2"
+      "creditHours": 3,
+      "instructorId": 14
     },
     {
       "id": "15",
@@ -696,21 +700,21 @@
     },
     {
       "id": "17",
-      "title": "Data Engineering",
-      "creditHours": "2",
+      "title": "Data Mining",
+      "creditHours": 2,
       "instructorId": 17
     },
     {
       "id": "18",
-      "title": "Computer Vision",
-      "creditHours": "3",
-      "instructorId": "18"
+      "title": "Parallel Computing",
+      "creditHours": 3,
+      "instructorId": 18
     },
     {
       "id": "19",
-      "title": "Data Entry",
-      "creditHours": "3",
-      "instructorId": "19"
+      "title": "Distributed Systems",
+      "creditHours": 3,
+      "instructorId": 19
     },
     {
       "id": "20",
@@ -721,74 +725,64 @@
   ],
   "employees": [
     {
-      "id": "1",
-      "name": "Mr. Mostafa Nabil",
-      "role": "Instructor"
-    },
-    {
       "id": "2",
-      "name": "Ms. Salma Ahmed",
-      "role": "Instructor"
-    },
-    {
-      "id": "3",
-      "name": "Mr. Mahmoud Fathi",
-      "role": "Student Affairs Admin"
+      "name": "Ms. Salma El‑Kady",
+      "role": "Admissions Officer"
     },
     {
       "id": "4",
       "name": "Ms. Nourhan Saad",
-      "role": "Instructor"
+      "role": "HR Specialist"
     },
     {
       "id": "5",
       "name": "Ms. Dalia Gasser",
-      "role": "Student Affairs Admin"
+      "role": "Student Affairs Officer"
     },
     {
-      "name": "Mr. Ahmed Hosiny",
       "id": "6",
-      "role": "Student Affairs Admin"
+      "name": "Mr. Ahmed Hosny",
+      "role": "Examinations Officer"
     },
     {
       "id": "7",
-      "name": "Ms. Reham Mohamed",
-      "role": "Graduate Studies Admin"
+      "name": "Ms. Reham Ali",
+      "role": "Academic Advisor"
     },
     {
       "id": "8",
       "name": "Mr. Youssef Farid",
-      "role": "Student Affairs Admin"
+      "role": "IT Support"
     },
     {
       "id": "9",
       "name": "Ms. Rana Samir",
-      "role": "Instructor"
+      "role": "Scholarships Coordinator"
     },
     {
       "id": "10",
       "name": "Mr. Hany Reda",
-      "role": "Graduate Studies Officer"
+      "role": "Internships & Industry Liaison"
     },
     {
       "id": "11",
       "name": "Ms. Mariam Fouad",
-      "role": "Graduate Studies Admin"
+      "role": "Assistant Registrar"
     },
     {
       "id": "12",
       "name": "Mr. Tamer El‑Sharkawy",
-      "role": "Graduate Studies Admin"
+      "role": "Procurement Officer"
     },
     {
       "id": "13",
       "name": "Ms. Sherine Rashed",
-      "role": "Instructor"
+      "role": "Quality Assurance Specialist"
     },
     {
       "id": "14",
       "name": "Mr. Karim Nasr",
-      "role": "Instructor"
+      "role": "Facilities Coordinator"
     },
     {
       "id": "15",
@@ -798,40 +792,30 @@
     {
       "id": "16",
       "name": "Mr. Ziad Yasser",
-      "role": "Instructor"
+      "role": "Communications & Media"
     },
     {
       "id": "17",
       "name": "Ms. Malak El‑Deeb",
-      "role": "Student Affairs Admin"
+      "role": "Alumni Relations Officer"
     },
     {
       "id": "18",
       "name": "Mr. Omar Fadel",
-      "role": "Graduate Studies Officer"
+      "role": "Laboratory Manager"
     },
     {
       "id": "19",
       "name": "Ms. Noura Ayman",
-      "role": "Studies Officer Admin"
+      "role": "Timetabling Officer"
     },
     {
       "id": "20",
-      "name": "Mr. Adel Rashed",
-      "role": "Student Affairs Admin"
+      "name": "Mr. Adel Rashad",
+      "role": "Student Services Coordinator"
     }
   ],
   "instructors": [
-    {
-      "id": "1",
-      "name": "Dr. Hany El‑Sayed",
-      "department": "Computer Science"
-    },
-    {
-      "name": "Dr. Rania Adel",
-      "department": "Artificial Intelligence",
-      "id": "2"
-    },
     {
       "id": "3",
       "name": "Dr. Tarek Naguib",
@@ -858,8 +842,9 @@
       "department": "Information Systems"
     },
     {
-      "name": "Dr. Laila Ahmed",
-      "id": "8"
+      "id": "8",
+      "name": "Dr. Laila Hassan",
+      "department": "Networks & Security"
     },
     {
       "id": "9",
@@ -902,19 +887,19 @@
       "department": "Machine Learning"
     },
     {
-      "name": "Dr. Omar Abdullah",
-      "department": "Data Engineering",
-      "id": "17"
+      "id": "17",
+      "name": "Dr. Omar Khalil",
+      "department": "Data Science"
     },
     {
-      "name": "Dr. Manal El‑Din",
       "id": "18",
-      "department": "Computer Vision"
+      "name": "Dr. Seif El‑Din",
+      "department": "High‑Performance Computing"
     },
     {
+      "id": "19",
       "name": "Dr. Reem Abdelaziz",
-      "department": "Data Entry",
-      "id": "19"
+      "department": "Distributed Systems"
     },
     {
       "id": "20",

@@ -21,17 +21,6 @@ let coursesInfo = await course.fetchData();
 let Instructor = new Instructors();
 let InstructorInfo = await Instructor.fetchData();
 
-let StudentId;
-let studentName;
-let studentEmail;
-let AdvisorId;
-
-let CourseId;
-let CourseTitle;
-let creditHours;
-let letInstructorName;
-
-let EntityTable = document.querySelector(".EntityTable");
 export function getHeaderStudentData(EntityTable, flag) {
   let head = EntityTable.children[0].children;
   Array.from(head).forEach(function (Element) {

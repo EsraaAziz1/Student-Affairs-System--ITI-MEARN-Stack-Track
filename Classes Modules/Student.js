@@ -16,10 +16,15 @@ export class Students extends Employee {
     }
     return id;
   }
+  getStudentCourses(StudentInfo) {
+    let CoursersData = [];
+    for (let i = 0; i < StudentInfo.length; i++) {
+      CoursersData.push(StudentInfo[i].courses);
+    }
+    return CoursersData;
+  }
 }
-
-// let std1 = new Students();
-// // console.log(std1.fetchData());
-// let stdData =await std1.fetchData()
-
-// console.log(stdData[1].courses[0])
+let std1 = new Students();
+// console.log(std1.fetchData());
+let stdData = await std1.fetchData();
+console.log(std1.getStudentCourses(stdData));
