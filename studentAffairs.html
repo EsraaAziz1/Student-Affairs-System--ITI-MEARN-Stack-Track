@@ -25,8 +25,8 @@
             <option value="10">10</option>
             <option value="25">25</option>
             <option value="50">50</option>
-            <option value="75">75</option>
-            <option value="100">100</option>
+            <option value="50">75</option>
+            <option value="50">100</option>
           </select>
           <label>Entries pre page</label>
         </form>
@@ -71,11 +71,15 @@
     </section>
     <br /><br />
     <section class="sec2">
-      <p>Showing <span></span> to <span></span> of <span></span> entries</p>
+      <p>
+        Showing <span class="startIndex"></span> to
+        <span class="EndIndex"></span> of <span class="length"></span> entries
+      </p>
       <form action="">
         <input
           type="button"
           value="Previous"
+          class="PreviousPage"
           style="
             background-color: #11404e;
             color: white;
@@ -86,6 +90,7 @@
         <input
           type="button"
           value="Next"
+          class="NextPage"
           style="
             background-color: #11404e;
             color: white;
@@ -128,7 +133,7 @@
         <label for="role">Role</label>
         <input type="text" name="role" class="Role" />
 
-        <input type="button" class="savedata" value="Save Data" />
+        <input type="button" class="savedataEmployee" value="Save Data" />
         <!-- <button class="savedata">Save Data</button> -->
       </form>
     </div>
@@ -146,7 +151,7 @@
         <label for="department">Department</label>
         <input type="text" name="department" class="Department" />
 
-        <input type="button" class="savedata" value="Save Data" />
+        <input type="button" class="savedataInstructor" value="Save Data" />
       </form>
     </div>
 
@@ -167,7 +172,7 @@
         <label for="instructor">Instructor Name</label>
         <input type="text" name="instructor" class="NameInstructor" />
 
-        <input type="button" class="savedata" value="Save Data" />
+        <input type="button" class="savedataCourse" value="Save Data" />
       </form>
     </div>
 
@@ -195,11 +200,11 @@
         <br />
         <label for="course3">3th Courses</label>
         <select name="course3" class="crs3"></select>
-        <input type="button" class="savedata" value="Save Data" />
+        <input type="button" class="savedataStudent" value="Save Data" />
       </form>
     </div>
 
     <script src="./Classes Modules/allModule.js" type="module"></script>
-    <script src="./Functional component/AddButton.js"></script>
+    <script src="Functional component/AddButton.js"></script>
   </body>
 </html>

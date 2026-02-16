@@ -19,11 +19,11 @@ function searching_by_employee(instance_of_employee) {
 
         let input = document.querySelector('input')
         let dataSearch = input.value.toLowerCase();
-        console.log(dataSearch)
+        // console.log(dataSearch)
         let search_data = instance_of_employee.filter((instance) => {
             return instance.name.toLowerCase().includes(dataSearch) || instance.role.toLowerCase().includes(dataSearch)
         })
-        console.log(search_data)
+        // console.log(search_data)
 
         EntityTable.innerHTML = '';
         Show_Header_Employee()
@@ -60,7 +60,7 @@ function searching_by_employee(instance_of_employee) {
             errorSearch.style.backgroundColor ='red';
              
         }
-        console.log(dataSearch)
+        // console.log(dataSearch)
         let search_data = instance_of_student.filter((instance) => {
             return instance.name.toLowerCase().includes(dataSearch) || instance.email.toLowerCase().includes(dataSearch);
         })
@@ -102,7 +102,7 @@ function searching_by_employee(instance_of_employee) {
         // if(dataSearch === '' || dataSearch )
         let input = document.querySelector('input')
         let dataSearch = input.value.toLowerCase();
-        console.log(dataSearch)
+        // console.log(dataSearch)
         let search_data = instance_of_instructor.filter((instance) => {
             return instance.name.toLowerCase().includes(dataSearch) || instance.department.toLowerCase().includes(dataSearch);
         })
@@ -138,11 +138,11 @@ function searching_by_employee(instance_of_employee) {
         // if(dataSearch === '' || dataSearch )
         let input = document.querySelector('input')
         let dataSearch = input.value.toLowerCase();
-        console.log(dataSearch)
+        // console.log(dataSearch)
         let search_data = instance_of_course.filter((instance) => {
             return instance.title.toLowerCase().includes(dataSearch);
         })
-        console.log(search_data)
+        // console.log(search_data)
 
         EntityTable.innerHTML = '';
         Show_Header_Courses()
@@ -176,6 +176,8 @@ function Show_Header_Employee() {
                             <h3>Delete</h3>
                     </div>
             `;
+    document.getElementsByClassName("header")[0].style.opacity = 1;
+
 }
 function Show_Header_Student() {
     EntityTable.innerHTML = `
@@ -189,6 +191,8 @@ function Show_Header_Student() {
                             <h3>Delete</h3>
                     </div>
             `;
+    document.getElementsByClassName("header")[0].style.opacity = 1;
+
 }
 function Show_Header_Instructor(){
      EntityTable.innerHTML = `
@@ -200,6 +204,8 @@ function Show_Header_Instructor(){
                             <h3>Delete</h3>
                     </div>
             `;
+    document.getElementsByClassName("header")[0].style.opacity = 1;
+
 }
 
 function Show_Header_Courses(){
@@ -213,6 +219,8 @@ function Show_Header_Courses(){
                             <h3>Delete</h3>
                     </div>
             `;
+    document.getElementsByClassName("header")[0].style.opacity = 1;
+
 }
 
 export { searching_by_employee , searching_by_Student ,searching_by_Instructor , searching_by_Courses}

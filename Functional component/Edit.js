@@ -24,14 +24,13 @@ function update_Employee() {
     let IdEmp = document.querySelector('.ID');
     let Name = document.querySelector('.Name');
     let Role = document.querySelector('.Role');
-    let savedata = document.querySelector('.savedata');
-    let prevRef = document.querySelector('form')
+    let savedataEmployee = document.querySelector('.savedataEmployee');
+    // let prevRef = document.querySelector('form')
 
     EntityTable.addEventListener('click', function (e) {
-        console.log(e)
-        console.log(e.target)
+        // console.log(e)
+        // console.log(e.target)
         // console.log(e.target.textContent)
-        //    console.log(e.target.name)
 
         if (e.target.classList.contains('edit')) {
             EmployeeForm.style.display = 'block';
@@ -39,8 +38,8 @@ function update_Employee() {
             CourseForm.style.display = 'none';
             InstructorForm.style.display = 'none';
 
-            console.log(e.target.parentElement)
-            console.log(e.target.parentElement.children[2].innerHTML)
+            // console.log(e.target.parentElement)
+            // console.log(e.target.parentElement.children[2].innerHTML)
             let ContentData = e.target.parentElement;
             IdEmp.value = ContentData.children[0].innerHTML;
             Name.value = ContentData.children[1].innerHTML;
@@ -51,11 +50,12 @@ function update_Employee() {
             // }    
         }
     })
-    prevRef.addEventListener('submit', (e) => {
+    // prevRef.addEventListener('submit', (e) => {
+    //     e.preventDefault()
+    // })
+    savedataEmployee.addEventListener('click', (e) => {
         e.preventDefault()
-    })
-    savedata.addEventListener('click', (e) => {
-        e.preventDefault()
+        console.log('Button clicked!');
         fetch(`http://localhost:3000/employees/${IdEmp.value}`, {
             method: 'PUT', /* or PATCH */
             headers: { 'Content-Type': 'application/json' },
@@ -79,20 +79,20 @@ function update_Instructor() {
     let InsID = document.querySelector('.InsID');
     let Name_Instructor = document.querySelector('.Name_Instructor');
     let Department = document.querySelector('.Department');
-    let savedata = document.querySelector('.savedata');
-    let prevRef = document.querySelector('form')
+    let savedataInstructor = document.querySelector('.savedataInstructor');
+    // let prevRef = document.querySelector('form')
 
     EntityTable.addEventListener('click', function (e) {
-        console.log(e)
-        console.log(e.target)
+        // console.log(e)
+        // console.log(e.target)
         if (e.target.classList.contains('edit')) {
             InstructorForm.style.display = 'block';
             EmployeeForm.style.display = 'none';
             StudentForm.style.display = 'none';
             CourseForm.style.display = 'none';
 
-            console.log(e.target.parentElement)
-            console.log(e.target.parentElement.children[2].innerHTML)
+            // console.log(e.target.parentElement)
+            // console.log(e.target.parentElement.children[2].innerHTML)
             let ContentData = e.target.parentElement;
             console.log(ContentData.children[0].innerHTML)
             InsID.value = ContentData.children[0].innerHTML;
@@ -100,10 +100,10 @@ function update_Instructor() {
             Department.value = ContentData.children[2].innerHTML;
         }
     })
-    prevRef.addEventListener('submit', (e) => {
-        e.preventDefault()
-    })
-    savedata.addEventListener('click', (e) => {
+    // prevRef.addEventListener('submit', (e) => {
+    //     e.preventDefault()
+    // })
+    savedataInstructor.addEventListener('click', (e) => {
         e.preventDefault()
         fetch(`http://localhost:3000/instructors/${InsID.value}`, {
             method: 'PUT', /* or PATCH */
@@ -133,21 +133,21 @@ function update_Student() {
     let course2 = document.querySelector('.crs2');
     let course3 = document.querySelector('.crs3');
 
-    let savedata = document.querySelector('.savedata');
-    let prevRef = document.querySelector('form')
+    let savedataStudent = document.querySelector('.savedataStudent');
+    // let prevRef = document.querySelector('form')
 
     let employeeId;
 
     EntityTable.addEventListener('click', async (e) => {
-        console.log(e)
-        console.log(e.target)
+        // console.log(e)
+        // console.log(e.target)
         if (e.target.classList.contains('edit')) {
             StudentForm.style.display = 'block';
             InstructorForm.style.display = 'none';
             EmployeeForm.style.display = 'none';
             CourseForm.style.display = 'none';
 
-            console.log(e.target.parentElement)
+            // console.log(e.target.parentElement)
             // console.log(e.target.parentElement.children[2].innerHTML)
             let ContentData = e.target.parentElement;
             stdID.value = ContentData.children[0].innerHTML;
@@ -164,34 +164,34 @@ function update_Student() {
             //    course1[index].innerText = course1[index].value ;
             // }
             employeeId = await employee.getIdOfEmployeeName(ContentData.children[4].innerHTML, dataEMPFetch);
-            console.log('Employee ID before fetch')
+            console.log('Employee ID before fetch' + employeeId)
         }
     })
 
-    prevRef.addEventListener('submit', (e) => {
-        e.preventDefault()
-    })
-    savedata.addEventListener('click', async (e) => {
+    // prevRef.addEventListener('submit', (e) => {
+    //     e.preventDefault()
+    // })
+    savedataStudent.addEventListener('click', async (e) => {
         e.preventDefault();
         let crs1 = course1.value;
         let crs2 = course2.value;
         let crs3 = course3.value;
         console.log(crs1, crs2, crs3)
-        let nameEMP = EmpOfStd.value;
+        let nameEMP = EmpOfStd.value.trim();
 
         let employeeNewId = await employee.getIdOfEmployeeName(nameEMP, dataEMPFetch);
         console.log("Employee New ID:", employeeNewId);
 
-        if (employeeNewId) {
-            await updateStudent(employeeNewId);
+        if (!employeeNewId) {
+            await editName_ofEmp_fromStd(employeeId, nameEMP);
+            await updateStudent(employeeId)
         }
         else {
-            await editName_ofEmp_fromStd(employeeId, nameEMP);
-            await updateStudent(employeeId);
+            await updateStudent(employeeNewId);
         }
 
-        console.log(EmpOfStd.value)
-        console.log(employeeId)
+        // console.log(EmpOfStd.value)
+        // console.log(employeeId)
 
         async function updateStudent(idEMP) {
             await fetch(`http://localhost:3000/students/${stdID.value}`, {
@@ -209,18 +209,6 @@ function update_Student() {
                 .then(res => res.json())
                 .then(console.log);
         }
-        // fetch(`http://localhost:3000/students/${stdID.value}`, {
-        //     method: 'PUT', /* or PATCH */
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({
-        //         id:  stdID.value,
-        //         name: StdName.value,
-        //         email: stdEmail.value,
-        //         advisorId: EmpOfStd.value 
-        //     })
-        // })
-        //     .then(res => res.json())
-        //     .then(console.log);
     })
 
 }
@@ -233,15 +221,15 @@ function update_Courses() {
     let Title = document.querySelector('.title');
     let creditHours = document.querySelector('.creditHours');
     let NameInstructor = document.querySelector('.NameInstructor');
-    let savedata = document.querySelector('.savedata');
-    let prevRef = document.querySelector('form');
+    let savedataCourse = document.querySelector('.savedataCourse');
+    // let prevRef = document.querySelector('form');
 
     let instructorId;
     let department_of_Instructor;
 
     EntityTable.addEventListener('click', async function (e) {
-        console.log(e)
-        console.log(e.target)
+        // console.log(e)
+        // console.log(e.target)
         let ContentData = e.target.parentElement;
         if (e.target.classList.contains('edit')) {
             CourseForm.style.display = 'block';
@@ -250,8 +238,8 @@ function update_Courses() {
             StudentForm.style.display = 'none';
 
 
-            console.log(e.target.parentElement)
-            console.log(e.target.parentElement.children[2].innerHTML)
+            // console.log(e.target.parentElement)
+            // console.log(e.target.parentElement.children[2].innerHTML)
             CrsId.value = ContentData.children[0].innerHTML;
             Title.value = ContentData.children[1].innerHTML;
             creditHours.value = ContentData.children[2].innerHTML;
@@ -263,10 +251,10 @@ function update_Courses() {
 
 
     })
-    prevRef.addEventListener('submit', (e) => {
-        e.preventDefault()
-    })
-    savedata.addEventListener('click', async (e) => {
+    // prevRef.addEventListener('submit', (e) => {
+    //     e.preventDefault()
+    // })
+    savedataCourse.addEventListener('click', async (e) => {
         e.preventDefault();
         let nameINS = NameInstructor.value;
         let depNameINS = Title.value;
@@ -276,7 +264,7 @@ function update_Courses() {
             await editName_ofIns_fromCrs(instructorId, nameINS, depNameINS);
         }
         let instructorNewId = await Instructor.getIdOfInstructorbyname(nameINS, dataINSFetch);
-        console.log("Instructor New ID:", instructorNewId);
+        // console.log("Instructor New ID:", instructorNewId);
 
         if (instructorNewId) {
             await updateCourse(instructorNewId);
@@ -286,8 +274,8 @@ function update_Courses() {
             await updateCourse(instructorId);
         }
 
-        console.log(NameInstructor.value)
-        console.log(instructorId)
+        // console.log(NameInstructor.value)
+        // console.log(instructorId)
 
         async function updateCourse(idINS) {
             await fetch(`http://localhost:3000/courses/${CrsId.value}`, {
@@ -348,11 +336,14 @@ function fetchNameofCrs(selectOptionCrs) {
 
 }
 async function editName_ofEmp_fromStd(id, nameEmp) {
+    let empData = dataEMPFetch.find(emp => emp.id == id);
     await fetch(`http://localhost:3000/employees/${id}`, {
-        method: 'PATCH ', /* or PUT */
+        method: 'PUT', /* or PUT */
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            name: nameEmp
+            id: empData.id,
+            name: nameEmp, 
+            role:empData.role
         })
     })
         .then(res => res.json())

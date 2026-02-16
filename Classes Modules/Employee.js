@@ -31,7 +31,7 @@ export class Employee {
     for (let i = 0; i < data.length; i++) {
       if (data[i].name == name) return data[i].id;
     }
-    throw new Error("Enter Advisor Name correctly");
+    // throw new Error("Enter Advisor Name correctly");
   }
 
   duplicateID(id, data) {

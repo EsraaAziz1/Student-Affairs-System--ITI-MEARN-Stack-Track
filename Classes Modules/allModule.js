@@ -27,6 +27,12 @@ import {
   getHeaderEmployeeData,
 } from "../Functional component/Sort.js";
 import {
+  paginatePage_Courses,
+  paginatePage_Employee,
+  paginatePage_Instructor,
+  paginatePage_Student,
+} from "../Functional component/Paginate.js";
+import {
   deleteStudentData,
   deleteCourseData,
   deleteInstructorData,
@@ -56,29 +62,34 @@ entity.forEach((ent) => {
     if (showTableOfEntity === "Employees") {
       reanderEmployeeData(EmployeeInfo);
       searching_by_employee(EmployeeInfo);
+      getHeaderEmployeeData(EntityTable, flag);
+      paginatePage_Employee(EmployeeInfo);
       update_Employee();
       deleteEmployeeData();
-      getHeaderEmployeeData(EntityTable, flag);
     } else if (showTableOfEntity === "Instructors") {
       EntityTable.innerHTML = "";
       reanderInstructorData(InstructorInfo);
       searching_by_Instructor(InstructorInfo);
+      getHeaderInstructorData(EntityTable, flag);
+      paginatePage_Instructor(InstructorInfo);
       update_Instructor();
       deleteInstructorData();
-      getHeaderInstructorData(EntityTable, flag);
     } else if (showTableOfEntity === "Students") {
+      EntityTable.innerHTML = "";
       renderStudentData(StudentInfo, coursesInfo, EmployeeInfo);
       searching_by_Student(StudentInfo, EmployeeInfo, coursesInfo);
+      getHeaderStudentData(EntityTable, flag);
+      paginatePage_Student(StudentInfo);
       update_Student();
       deleteStudentData();
-      getHeaderStudentData(EntityTable, flag);
     } else if (showTableOfEntity === "Courses") {
       EntityTable.innerHTML = "";
       reanderCoursesData(coursesInfo);
       searching_by_Courses(coursesInfo, InstructorInfo);
+      getHeaderCourseData(EntityTable, flag);
+      paginatePage_Courses(coursesInfo);
       update_Courses();
       deleteCourseData();
-      getHeaderCourseData(EntityTable, flag);
     }
   });
 });
