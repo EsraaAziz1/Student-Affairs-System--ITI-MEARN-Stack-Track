@@ -12,11 +12,13 @@ export class Instructors extends Courses {
       console.log("ERROR with catch", error);
     }
   }
+  
   getNameOfInstructor(id, data) {
     for (let i = 0; i < data.length; i++) {
       if (data[i].id == id) return data[i].name;
     }
   }
+<<<<<<< Updated upstream
   getIdOfInstructorbyname(name, data) {
     for (let i = 0; i < data.length; i++) {
       if (data[i].name == name) return data[i].id;
@@ -29,9 +31,28 @@ export class Instructors extends Courses {
     }
     return id;
   }
+=======
+
+  getIDofInstructor(name , data){
+     for (let index = 0; index < data.length; index++) {
+         if(data[index].name === name) return data[index].id;
+     }
+  }
+ 
+  getIDCrsOfInstructor(dep, data) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].department === dep) return data[i].id;
+    }
+  }
+
+>>>>>>> Stashed changes
 }
+
 
 // let ins1 = new Instructors();
 // console.log(ins1.fetchData());
-
 // console.log(ins1.getName_ofInstructor(1));
+
+// let dataFetched = await ins1.fetchData()
+// console.log(ins1.getIDofInstructor("Dr. Walid Saber" , dataFetched))
+

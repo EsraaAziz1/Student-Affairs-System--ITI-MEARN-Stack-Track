@@ -18,5 +18,8 @@ export class Students extends Employee {
   }
 }
 
-// let std1 = new Students();
+let std1 = new Students();
 // console.log(std1.fetchData());
+let stdData =await std1.fetchData()
+
+console.log(stdData[1].courses[0])

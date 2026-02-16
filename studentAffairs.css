@@ -42,12 +42,7 @@ section {
   margin: auto;
 }
 section div {
-  display: grid;
-  grid-template-columns: 10px repeat(6, 2fr);
-  grid-template-rows: repeat(7, auto);
-  justify-content: space-between;
-  column-gap: 30px;
-  row-gap: 3px;
+ 
   background-color: #e5ecf3;
   padding: 3px;
 }
@@ -84,17 +79,123 @@ section .forms,
   border: none;
   border-radius: 3px;
 }
-
+.edit:hover , .delete:hover{
+   cursor: pointer;
+}
 .header {
   padding: 10px;
   margin: auto;
+   display: grid;
+  /* grid-template-columns: 10px repeat(6, 2fr); */
+  grid-template-rows: repeat(7, auto);
+  justify-content: space-between;
+  column-gap: 30px;
+  row-gap: 3px;
 }
 .content {
   padding: 10px;
   margin: auto;
+  display: grid;
+  /* grid-template-columns: 10px repeat(6, 2fr); */
+  grid-template-rows: repeat(7, auto);
+  justify-content: space-between;
+  column-gap: 30px;
+   row-gap: 3px;
 }
 .content select {
   width: 210px;
 }
 
+<<<<<<< Updated upstream
 /* ////////////////section2//////////////// */
+=======
+
+
+/* ////////////////Editing Form//////////////// */
+
+.StudentForm {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 50px;
+  margin: auto;
+  width: 500px;
+  background-color: #e5ecf3;
+  visibility: hidden;
+  /* opacity: 0; */
+}
+
+.EmployeeForm {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 50px;
+  margin: auto;
+  width: 500px;
+  background-color: #e5ecf3;
+  visibility: hidden;
+  /* visibility: visible; */
+  /* opacity: 0; */
+}
+
+.CourseForm {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 50px;
+  margin: auto;
+  width: 500px;
+  background-color: #e5ecf3;
+  visibility: hidden;
+  /* opacity: 0; */
+
+}
+.InstructorForm {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 50px;
+  margin: auto;
+  width: 500px;
+  background-color: #e5ecf3;
+  visibility: hidden;
+  /* opacity: 0; */
+
+}
+
+.entity {
+  margin: 10px auto;
+  text-align: center;
+}
+.entity select {
+  padding: 5px;
+  border-radius: 10px;
+}
+h1 {
+  text-align: center;
+}
+.StudentForm label,
+.EmployeeForm label,
+.CourseForm label,
+.InstructorForm label {
+  display: block;
+  margin: 5px;
+}
+.StudentForm input,
+.EmployeeForm input,
+.CourseForm input,
+.InstructorForm input {
+  display: block;
+  width: 300px;
+}
+.StudentForm select {
+  padding: 3px;
+  margin: 5px;
+}
+.savedata {
+  width: 100px;
+  border-radius: 10px;
+  background-color: #6cbdc1;
+  border: none;
+  padding: 5px;
+  margin: 10px auto;
+}
+
+
+>>>>>>> Stashed changes
