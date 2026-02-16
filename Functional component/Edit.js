@@ -19,11 +19,9 @@ let InstructorForm = document.querySelector('.InstructorForm')
 ///////////////////////////// Entity Employee Update //////////////////////////
 
 function update_Employee() {
-    StudentForm.innerHTML = '';
-    CourseForm.innerHTML = '';
-    InstructorForm.innerHTML = ''
 
-    let ID = document.querySelector('.ID');
+
+    let IdEmp = document.querySelector('.ID');
     let Name = document.querySelector('.Name');
     let Role = document.querySelector('.Role');
     let savedata = document.querySelector('.savedata');
@@ -36,11 +34,15 @@ function update_Employee() {
         //    console.log(e.target.name)
 
         if (e.target.classList.contains('edit')) {
-            EmployeeForm.style.visibility = 'visible';
+            EmployeeForm.style.display = 'block';
+            StudentForm.style.display = 'none';
+            CourseForm.style.display = 'none';
+            InstructorForm.style.display = 'none';
+
             console.log(e.target.parentElement)
             console.log(e.target.parentElement.children[2].innerHTML)
             let ContentData = e.target.parentElement;
-            ID.value = ContentData.children[0].innerHTML;
+            IdEmp.value = ContentData.children[0].innerHTML;
             Name.value = ContentData.children[1].innerHTML;
             Role.value = ContentData.children[2].innerHTML;
 
@@ -49,16 +51,16 @@ function update_Employee() {
             // }    
         }
     })
-    prevRef.addEventListener('click', (e) => {
+    prevRef.addEventListener('submit', (e) => {
         e.preventDefault()
     })
     savedata.addEventListener('click', (e) => {
         e.preventDefault()
-        fetch(`http://localhost:3000/employees/${ID.value}`, {
+        fetch(`http://localhost:3000/employees/${IdEmp.value}`, {
             method: 'PUT', /* or PATCH */
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                id: ID.value,
+                id: IdEmp.value,
                 name: Name.value,
                 role: Role.value
             })
@@ -72,11 +74,9 @@ function update_Employee() {
 
 ///////////////////////////// Entity Instructor Update //////////////////////////
 function update_Instructor() {
-    StudentForm.innerHTML = '';
-    CourseForm.innerHTML = '';
-    EmployeeForm.innerHTML = ''
 
-    let ID = document.querySelector('.ID');
+
+    let InsID = document.querySelector('.InsID');
     let Name_Instructor = document.querySelector('.Name_Instructor');
     let Department = document.querySelector('.Department');
     let savedata = document.querySelector('.savedata');
@@ -86,11 +86,16 @@ function update_Instructor() {
         console.log(e)
         console.log(e.target)
         if (e.target.classList.contains('edit')) {
-            InstructorForm.style.visibility = 'visible';
+            InstructorForm.style.display = 'block';
+            EmployeeForm.style.display = 'none';
+            StudentForm.style.display = 'none';
+            CourseForm.style.display = 'none';
+
             console.log(e.target.parentElement)
             console.log(e.target.parentElement.children[2].innerHTML)
             let ContentData = e.target.parentElement;
-            ID.value = ContentData.children[0].innerHTML;
+            console.log(ContentData.children[0].innerHTML)
+            InsID.value = ContentData.children[0].innerHTML;
             Name_Instructor.value = ContentData.children[1].innerHTML;
             Department.value = ContentData.children[2].innerHTML;
         }
@@ -99,12 +104,12 @@ function update_Instructor() {
         e.preventDefault()
     })
     savedata.addEventListener('click', (e) => {
-        e.preventDefault()  
-        fetch(`http://localhost:3000/instructors/${ID.value}`, {
+        e.preventDefault()
+        fetch(`http://localhost:3000/instructors/${InsID.value}`, {
             method: 'PUT', /* or PATCH */
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                id: ID.value,
+                id: InsID.value,
                 name: Name_Instructor.value,
                 department: Department.value
             })
@@ -116,11 +121,9 @@ function update_Instructor() {
 }
 
 ///////////////////////////// Entity Student Update //////////////////////////
- 
+
 function update_Student() {
-    InstructorForm.innerHTML = '';
-    CourseForm.innerHTML = '';
-    EmployeeForm.innerHTML = ''
+
 
     let stdID = document.querySelector('.stdID');
     let StdName = document.querySelector('.StdName');
@@ -132,14 +135,18 @@ function update_Student() {
 
     let savedata = document.querySelector('.savedata');
     let prevRef = document.querySelector('form')
-    
+
     let employeeId;
 
-    EntityTable.addEventListener('click',  async(e)=> {
+    EntityTable.addEventListener('click', async (e) => {
         console.log(e)
         console.log(e.target)
         if (e.target.classList.contains('edit')) {
-            StudentForm.style.visibility = 'visible';
+            StudentForm.style.display = 'block';
+            InstructorForm.style.display = 'none';
+            EmployeeForm.style.display = 'none';
+            CourseForm.style.display = 'none';
+
             console.log(e.target.parentElement)
             // console.log(e.target.parentElement.children[2].innerHTML)
             let ContentData = e.target.parentElement;
@@ -147,55 +154,55 @@ function update_Student() {
             StdName.value = ContentData.children[1].innerHTML;
             stdEmail.value = ContentData.children[2].innerHTML;
             EmpOfStd.value = ContentData.children[4].innerHTML;
-           fetchNameofCrs(course1)
-           fetchNameofCrs(course2)
-           fetchNameofCrs(course3)
+            fetchNameofCrs(course1)
+            fetchNameofCrs(course2)
+            fetchNameofCrs(course3)
 
             // console.log(ContentData.children[3].children[0].children[1].innerHTML)
             // for (let index = 0; index < ContentData.children[3].innerHTML.length; index++) {
             //    course1[index].value = ContentData.children[3].innerHTML[index]
             //    course1[index].innerText = course1[index].value ;
             // }
-            employeeId= await employee.getIDofEmployee(ContentData.children[4].innerHTML,dataEMPFetch);
+            employeeId = await employee.getIdOfEmployeeName(ContentData.children[4].innerHTML, dataEMPFetch);
             console.log('Employee ID before fetch')
         }
     })
-    
-    prevRef.addEventListener('click', (e) => {
+
+    prevRef.addEventListener('submit', (e) => {
         e.preventDefault()
     })
     savedata.addEventListener('click', async (e) => {
         e.preventDefault();
-           let crs1 = course1.value;
-           let crs2 = course2.value;
-           let crs3 = course3.value;
-           console.log(crs1 , crs2 , crs3)
+        let crs1 = course1.value;
+        let crs2 = course2.value;
+        let crs3 = course3.value;
+        console.log(crs1, crs2, crs3)
         let nameEMP = EmpOfStd.value;
 
-        let employeeNewId = await employee.getIDofEmployee(nameEMP,dataEMPFetch);
+        let employeeNewId = await employee.getIdOfEmployeeName(nameEMP, dataEMPFetch);
         console.log("Employee New ID:", employeeNewId);
 
-        if (employeeNewId ) {
+        if (employeeNewId) {
             await updateStudent(employeeNewId);
         }
-        else{
-             await editName_ofEmp_fromStd(employeeId , nameEMP );
-             await updateStudent(employeeId);
-        } 
-    
+        else {
+            await editName_ofEmp_fromStd(employeeId, nameEMP);
+            await updateStudent(employeeId);
+        }
+
         console.log(EmpOfStd.value)
         console.log(employeeId)
-         
-         async function updateStudent(idEMP) {
-          await  fetch(`http://localhost:3000/students/${stdID.value}`, {
+
+        async function updateStudent(idEMP) {
+            await fetch(`http://localhost:3000/students/${stdID.value}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    id:  stdID.value,
+                    id: stdID.value,
                     name: StdName.value,
                     email: stdEmail.value,
-                    courses:[crs1 , crs2 ,crs3],
-                    advisorId: idEMP ,
+                    courses: [crs1, crs2, crs3],
+                    advisorId: idEMP,
 
                 })
             })
@@ -221,11 +228,8 @@ function update_Student() {
 
 ///////////////////////////// Entity Courses Update //////////////////////////
 function update_Courses() {
-    StudentForm.innerHTML = '';
-    InstructorForm.innerHTML = '';
-    EmployeeForm.innerHTML = '';
 
-    let Id = document.querySelector('.Id');
+    let CrsId = document.querySelector('.CrsId');
     let Title = document.querySelector('.title');
     let creditHours = document.querySelector('.creditHours');
     let NameInstructor = document.querySelector('.NameInstructor');
@@ -234,58 +238,63 @@ function update_Courses() {
 
     let instructorId;
     let department_of_Instructor;
-     
-    EntityTable.addEventListener('click',async function (e) {
+
+    EntityTable.addEventListener('click', async function (e) {
         console.log(e)
         console.log(e.target)
         let ContentData = e.target.parentElement;
         if (e.target.classList.contains('edit')) {
-            CourseForm.style.visibility = 'visible';
+            CourseForm.style.display = 'block';
+            InstructorForm.style.display = 'none';
+            EmployeeForm.style.display = 'none';
+            StudentForm.style.display = 'none';
+
+
             console.log(e.target.parentElement)
             console.log(e.target.parentElement.children[2].innerHTML)
-            Id.value = ContentData.children[0].innerHTML;
+            CrsId.value = ContentData.children[0].innerHTML;
             Title.value = ContentData.children[1].innerHTML;
             creditHours.value = ContentData.children[2].innerHTML;
             NameInstructor.value = ContentData.children[3].innerHTML;
-            instructorId =await Instructor.getIDofInstructor(ContentData.children[3].innerHTML, dataINSFetch);
+            instructorId = await Instructor.getIdOfInstructorbyname(ContentData.children[3].innerHTML, dataINSFetch);
             console.log("Instructor ID after fetch:", instructorId);
             department_of_Instructor = ContentData.children[1].innerHTML;
         }
-        
+
 
     })
     prevRef.addEventListener('submit', (e) => {
         e.preventDefault()
     })
-    savedata.addEventListener('click', async(e) => {
+    savedata.addEventListener('click', async (e) => {
         e.preventDefault();
         let nameINS = NameInstructor.value;
         let depNameINS = Title.value;
-        if(depNameINS !== department_of_Instructor){
-             department_of_Instructor = depNameINS;
-             console.log(depNameINS);
-             await editName_ofIns_fromCrs(instructorId , nameINS , depNameINS);
+        if (depNameINS !== department_of_Instructor) {
+            department_of_Instructor = depNameINS;
+            console.log(depNameINS);
+            await editName_ofIns_fromCrs(instructorId, nameINS, depNameINS);
         }
-        let instructorNewId =await Instructor.getIDofInstructor(nameINS, dataINSFetch);
+        let instructorNewId = await Instructor.getIdOfInstructorbyname(nameINS, dataINSFetch);
         console.log("Instructor New ID:", instructorNewId);
 
-        if (instructorNewId ) {
+        if (instructorNewId) {
             await updateCourse(instructorNewId);
         }
-        else{
-             await editName_ofIns_fromCrs(instructorId , nameINS , depNameINS);
-             await updateCourse(instructorId);
-        } 
-    
+        else {
+            await editName_ofIns_fromCrs(instructorId, nameINS, depNameINS);
+            await updateCourse(instructorId);
+        }
+
         console.log(NameInstructor.value)
         console.log(instructorId)
-     
-         async function updateCourse(idINS) {
-          await  fetch(`http://localhost:3000/courses/${Id.value}`, {
+
+        async function updateCourse(idINS) {
+            await fetch(`http://localhost:3000/courses/${CrsId.value}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    id: Id.value,
+                    id: CrsId.value,
                     title: depNameINS,
                     creditHours: creditHours.value,
                     instructorId: idINS
@@ -313,33 +322,33 @@ function update_Courses() {
 
 //////////////////////////////mini function////////////////////////////
 
-async function editName_ofIns_fromCrs(id, nameINS , crsName) {
-   await fetch(`http://localhost:3000/instructors/${id}`, {
+async function editName_ofIns_fromCrs(id, nameINS, crsName) {
+    await fetch(`http://localhost:3000/instructors/${id}`, {
         method: 'PUT', /* or PATCH */
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            name: nameINS , 
-            department : crsName
+            name: nameINS,
+            department: crsName
         })
     })
         .then(res => res.json())
         .then(console.log);
 }
 
- function fetchNameofCrs(selectOptionCrs){
-        selectOptionCrs.innerHTML = `<option value="">Select Course</option>`;
+function fetchNameofCrs(selectOptionCrs) {
+    selectOptionCrs.innerHTML = `<option value="">Select Course</option>`;
 
-       for (let i = 0; i < dataCRSFetch.length; i++) {
+    for (let i = 0; i < dataCRSFetch.length; i++) {
         selectOptionCrs.innerHTML += `
             <option value="${dataCRSFetch[i].id}">
                 ${dataCRSFetch[i].title}
             </option>
         `;
     }
-        
- }
- async function editName_ofEmp_fromStd(id, nameEmp) {
-   await fetch(`http://localhost:3000/employees/${id}`, {
+
+}
+async function editName_ofEmp_fromStd(id, nameEmp) {
+    await fetch(`http://localhost:3000/employees/${id}`, {
         method: 'PATCH ', /* or PUT */
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

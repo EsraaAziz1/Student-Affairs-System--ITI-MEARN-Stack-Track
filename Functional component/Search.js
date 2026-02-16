@@ -63,10 +63,8 @@ function searching_by_employee(instance_of_employee) {
         console.log(dataSearch)
         let search_data = instance_of_student.filter((instance) => {
             return instance.name.toLowerCase().includes(dataSearch) || instance.email.toLowerCase().includes(dataSearch);
-
-            // instance.department.toLowerCase().includes(dataSearch)
         })
-        console.log(search_data)
+        // console.log(search_data)
 
         EntityTable.innerHTML = '';
         Show_Header_Student()
@@ -79,9 +77,9 @@ function searching_by_employee(instance_of_employee) {
                         <p>
                         <select name="course" >
                             <option value="default">Courses</option>
-                            <option value="course1">${course.getName_ofCourses(search_data[index].courses[0], courseFetched)}</option>
-                            <option value="course2">${course.getName_ofCourses(search_data[index].courses[1], courseFetched)}</option>
-                            <option value="course3">${course.getName_ofCourses(search_data[index].courses[2], courseFetched)}</option>
+                            <option value="course1">${course.getNameofCoursesbyID(search_data[index].courses[0], courseFetched)}</option>
+                            <option value="course2">${course.getNameofCoursesbyID(search_data[index].courses[1], courseFetched)}</option>
+                            <option value="course3">${course.getNameofCoursesbyID(search_data[index].courses[2], courseFetched)}</option>
                         </select>
                         </p>
                         <p>${employee.getNameOfEmployee(search_data[index].advisorId, instance_of_Employee)}</p>
@@ -108,7 +106,7 @@ function searching_by_employee(instance_of_employee) {
         let search_data = instance_of_instructor.filter((instance) => {
             return instance.name.toLowerCase().includes(dataSearch) || instance.department.toLowerCase().includes(dataSearch);
         })
-        console.log(search_data)
+        // console.log(search_data)
 
         EntityTable.innerHTML = '';
         Show_Header_Instructor()

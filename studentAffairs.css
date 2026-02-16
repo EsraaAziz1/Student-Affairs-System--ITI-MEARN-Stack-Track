@@ -116,7 +116,8 @@ section .forms,
   margin: auto;
   width: 500px;
   background-color: #e5ecf3;
-  visibility: hidden;
+  display: none;
+  /* visibility: hidden; */
   /* opacity: 0; */
 }
 
@@ -127,7 +128,8 @@ section .forms,
   margin: auto;
   width: 500px;
   background-color: #e5ecf3;
-  visibility: hidden;
+  display: none;
+  /* visibility: hidden; */
   /* visibility: visible; */
   /* opacity: 0; */
 }
@@ -139,7 +141,8 @@ section .forms,
   margin: auto;
   width: 500px;
   background-color: #e5ecf3;
-  visibility: hidden;
+  display: none;
+  /* visibility: hidden; */
   /* opacity: 0; */
 }
 .InstructorForm {
@@ -149,7 +152,8 @@ section .forms,
   margin: auto;
   width: 500px;
   background-color: #e5ecf3;
-  visibility: hidden;
+  display: none;
+  /* visibility: hidden; */
   /* opacity: 0; */
 }
 

@@ -42,6 +42,7 @@ export class Instructors extends Courses {
       if (data[i].department === dep) return data[i].id;
     }
   }
+
 }
 
 // let ins1 = new Instructors();

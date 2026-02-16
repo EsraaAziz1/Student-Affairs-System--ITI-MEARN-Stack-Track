@@ -11,7 +11,7 @@ let InstructorInfo = await Instructor.fetchData();
 let EntityTable = document.querySelector(".EntityTable");
 
 function reanderEmployeeData(EmployeeInfo) {
-  EntityTable.innerHTML = `<div class="header">
+  EntityTable.innerHTML = `<div class="header" style="grid-template-columns: 10px repeat(4, 1fr);">
                             <h3>ID</h3>
                             <h3>Name</h3>
                             <h3>Role</h3>
@@ -20,7 +20,7 @@ function reanderEmployeeData(EmployeeInfo) {
   document.getElementsByClassName("header")[0].style.opacity = 1;
   for (let index = 0; index < EmployeeInfo.length; index++) {
     EntityTable.innerHTML += `
-                    <div class="content">
+                    <div class="content" style="grid-template-columns: 10px repeat(4, 1fr);">
                         <p>${EmployeeInfo[index].id}</p>
                         <p>${EmployeeInfo[index].name}</p>
                         <p>${EmployeeInfo[index].role}</p>
@@ -31,7 +31,7 @@ function reanderEmployeeData(EmployeeInfo) {
 }
 
 function reanderInstructorData(InstructorInfo) {
-  EntityTable.innerHTML = `<div class="header">
+  EntityTable.innerHTML = `<div class="header" style="grid-template-columns: 10px repeat(4, 1fr);">
                             <h3>ID</h3>
                             <h3>Name</h3>
                             <h3>Department</h3>
@@ -41,7 +41,7 @@ function reanderInstructorData(InstructorInfo) {
   document.getElementsByClassName("header")[0].style.opacity = 1;
   for (let index = 0; index < InstructorInfo.length; index++) {
     EntityTable.innerHTML += `
-                    <div class="content">
+                    <div class="content" style="grid-template-columns: 10px repeat(4, 1fr);">
                         <p>${InstructorInfo[index].id}</p>
                         <p>${InstructorInfo[index].name}</p>
                         <p>${InstructorInfo[index].department}</p>
@@ -51,7 +51,7 @@ function reanderInstructorData(InstructorInfo) {
   }
 }
 function renderStudentData(StudentInfo, coursesInfo, EmployeeInfo) {
-  EntityTable.innerHTML = `<div class="header">
+  EntityTable.innerHTML = `<div class="header" style="grid-template-columns: 10px repeat(6, 2fr);">
                             <h3>ID</h3>
                             <h3>Name</h3>
                             <h3>Email</h3>
@@ -62,7 +62,7 @@ function renderStudentData(StudentInfo, coursesInfo, EmployeeInfo) {
   document.getElementsByClassName("header")[0].style.opacity = 1;
   for (let i = 0; i < StudentInfo.length; i++) {
     EntityTable.innerHTML += `
-    <div class="content">
+    <div class="content" style="grid-template-columns: 10px repeat(6, 2fr);">
     <p>${StudentInfo[i].id}</p>
         <p>${StudentInfo[i].name}</p>
         <p>${StudentInfo[i].email}</p>
@@ -81,7 +81,7 @@ function renderStudentData(StudentInfo, coursesInfo, EmployeeInfo) {
   }
 }
 function reanderCoursesData(coursesInfo) {
-  EntityTable.innerHTML = `<div class="header">
+  EntityTable.innerHTML = `<div class="header" style="grid-template-columns: 10px repeat(5, 1fr)">
                             <h3>ID</h3>
                             <h3>Title</h3>
                             <h3>Credit Hours</h3>
@@ -91,7 +91,7 @@ function reanderCoursesData(coursesInfo) {
                     </div>`;
   document.getElementsByClassName("header")[0].style.opacity = 1;
   for (let index = 0; index < coursesInfo.length; index++) {
-    EntityTable.innerHTML += `<div class="content">
+    EntityTable.innerHTML += `<div class="content" style="grid-template-columns: 10px repeat(5, 1fr);">
                         <p>${coursesInfo[index].id}</p>
                         <p>${coursesInfo[index].title}</p>
                         <p>${coursesInfo[index].creditHours}</p>

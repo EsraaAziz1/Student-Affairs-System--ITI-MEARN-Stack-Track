@@ -47,28 +47,28 @@ entity.forEach((ent) => {
     let showTableOfEntity = e.target.innerHTML;
     if (showTableOfEntity === "Employees") {
       reanderEmployeeData(EmployeeInfo);
-      searching_by_employee(dataEmployee);
+      searching_by_employee(EmployeeInfo);
       update_Employee();
+ getHeaderEmployeeData(EntityTable, flag);
+        } else if (showTableOfEntity === "Instructors") {
 
-      getHeaderEmployeeData(EntityTable, flag);
-    } else if (showTableOfEntity === "Instructors") {
-      EntityTable.innerHTML = "";
-      reanderInstructorData(InstructorInfo);
-      searching_by_Instructor(InstructorInfo);
-      update_Instructor();
+            EntityTable.innerHTML = "";
+           reanderInstructorData(InstructorInfo);
+            searching_by_Instructor(InstructorInfo);
+            update_Instructor();
 
       getHeaderInstructorData(EntityTable, flag);
     } else if (showTableOfEntity === "Students") {
       reanderInstructorData(InstructorInfo);
       renderStudentData();
-      searching_by_Student(StudentInfo, dataEmployee, dataCoures);
+       searching_by_Student(StudentInfo, EmployeeInfo, coursesInfo);
       update_Student();
 
       getHeaderStudentData(EntityTable, flag);
     } else if (showTableOfEntity === "Courses") {
       EntityTable.innerHTML = "";
       reanderCoursesData(coursesInfo);
-      searching_by_Courses(dataCoures, InstructorInfo);
+       searching_by_Courses(coursesInfo, InstructorInfo);
       update_Courses();
       getHeaderCourseData(EntityTable, flag);
     }
