@@ -9,6 +9,12 @@ import {
   searching_by_Courses,
 } from "../Functional component/Search.js";
 import {
+  update_Employee,
+  update_Instructor,
+  update_Student,
+  update_Courses,
+} from "../Functional component/Edit.js";
+import {
   reanderCoursesData,
   reanderEmployeeData,
   reanderInstructorData,
@@ -34,29 +40,36 @@ let InstructorInfo = await Instructor.fetchData();
 let flag = false;
 let entity = document.querySelectorAll("li");
 let EntityTable = document.querySelector(".EntityTable");
-let headerTable = document.getElementsByClassName("header")[0];
+
 entity.forEach((ent) => {
   ent.addEventListener("click", function (e) {
     console.log(e.target.innerHTML);
     let showTableOfEntity = e.target.innerHTML;
     if (showTableOfEntity === "Employees") {
       reanderEmployeeData(EmployeeInfo);
-      searching_by_employee(EmployeeInfo);
+      searching_by_employee(dataEmployee);
+      update_Employee();
+
       getHeaderEmployeeData(EntityTable, flag);
     } else if (showTableOfEntity === "Instructors") {
       EntityTable.innerHTML = "";
       reanderInstructorData(InstructorInfo);
       searching_by_Instructor(InstructorInfo);
+      update_Instructor();
+
       getHeaderInstructorData(EntityTable, flag);
     } else if (showTableOfEntity === "Students") {
-      EntityTable.innerHTML = "";
-      renderStudentData(StudentInfo, coursesInfo, EmployeeInfo);
-      searching_by_Student(StudentInfo, EmployeeInfo, coursesInfo);
+      reanderInstructorData(InstructorInfo);
+      renderStudentData();
+      searching_by_Student(StudentInfo, dataEmployee, dataCoures);
+      update_Student();
+
       getHeaderStudentData(EntityTable, flag);
     } else if (showTableOfEntity === "Courses") {
       EntityTable.innerHTML = "";
       reanderCoursesData(coursesInfo);
-      searching_by_Courses(coursesInfo, InstructorInfo);
+      searching_by_Courses(dataCoures, InstructorInfo);
+      update_Courses();
       getHeaderCourseData(EntityTable, flag);
     }
   });

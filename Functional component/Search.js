@@ -7,6 +7,7 @@ let course = new Courses();
 let Instructor = new Instructors();
 
 let EntityTable = document.querySelector(".EntityTable");
+let errorSearch = document.querySelector('#errorSearch')
 
 // ///////////////////////////////////////Searching by Employee ///////////////////////////////////////////////////////
 function searching_by_employee(instance_of_employee) {
@@ -28,7 +29,7 @@ function searching_by_employee(instance_of_employee) {
         Show_Header_Employee()
         for (let index = 0; index < search_data.length; index++) {
             EntityTable.innerHTML += `
-               <div class="content">
+               <div class="content" style="grid-template-columns: 10px repeat(4, 1fr);">
                         <p>${search_data[index].id}</p>
                         <p>${search_data[index].name}</p>
                         <p>${search_data[index].role}</p>
@@ -51,9 +52,14 @@ function searching_by_employee(instance_of_employee) {
     let search = document.querySelector('#search_data');
     search.addEventListener('input', function () {
         // debugger
-        // if(dataSearch === '' || dataSearch )
         let input = document.querySelector('input')
         let dataSearch = input.value.toLowerCase();
+        if(dataSearch === ' ' ||  typeof dataSearch != 'string'){
+            //  throw new Error("please Enter Valid Data");
+            errorSearch.innerHTML = `please Enter Valid Data`;
+            errorSearch.style.backgroundColor ='red';
+             
+        }
         console.log(dataSearch)
         let search_data = instance_of_student.filter((instance) => {
             return instance.name.toLowerCase().includes(dataSearch) || instance.email.toLowerCase().includes(dataSearch);
@@ -66,7 +72,7 @@ function searching_by_employee(instance_of_employee) {
         Show_Header_Student()
         for (let index = 0; index < search_data.length; index++) {
              EntityTable.innerHTML += `
-                    <div class="content">
+                    <div class="content" style="grid-template-columns: 10px repeat(6, 2fr);">
                         <p>${search_data[index].id}</p>
                         <p>${search_data[index].name}</p>
                         <p>${search_data[index].email}</p>
@@ -108,7 +114,7 @@ function searching_by_employee(instance_of_employee) {
         Show_Header_Instructor()
        for (let index = 0; index < search_data.length; index++) {
             EntityTable.innerHTML += `         
-                    <div class="content">
+                    <div class="content" style="grid-template-columns: 10px repeat(4, 1fr);">
                         <p>${search_data[index].id}</p>
                         <p>${search_data[index].name}</p>
                         <p>${search_data[index].department}</p>
@@ -144,7 +150,7 @@ function searching_by_employee(instance_of_employee) {
         Show_Header_Courses()
        for (let index = 0; index < search_data.length; index++) {
             EntityTable.innerHTML += `
-                    <div class="content">
+                    <div class="content" style="grid-template-columns: 10px repeat(5, 1fr);">
                         <p>${search_data[index].id}</p>
                         <p>${search_data[index].title}</p>
                         <p>${search_data[index].creditHours}</p>
@@ -164,7 +170,7 @@ function searching_by_employee(instance_of_employee) {
 /////////////////////////////////////////////////Headers Show/////////////////////////////////////////////////
 function Show_Header_Employee() {
     EntityTable.innerHTML = `
-                  <div class="header">
+                  <div class="header" style="grid-template-columns: 10px repeat(4, 1fr);">
                             <h3>ID</h3>
                             <h3>Name</h3>
                             <h3>Role</h3>
@@ -175,7 +181,7 @@ function Show_Header_Employee() {
 }
 function Show_Header_Student() {
     EntityTable.innerHTML = `
-                  <div class="header">
+                  <div class="header" style="grid-template-columns: 10px repeat(6, 2fr);">
                             <h3>ID</h3>
                             <h3>Name</h3>
                             <h3>Email</h3>
@@ -188,7 +194,7 @@ function Show_Header_Student() {
 }
 function Show_Header_Instructor(){
      EntityTable.innerHTML = `
-                  <div class="header">
+                  <div class="header" style="grid-template-columns: 10px repeat(4, 1fr);">
                             <h3>ID</h3>
                             <h3>Name</h3>
                             <h3>Department</h3>
@@ -200,7 +206,7 @@ function Show_Header_Instructor(){
 
 function Show_Header_Courses(){
     EntityTable.innerHTML = `
-                  <div class="header">
+                  <div class="header" style="grid-template-columns: 10px repeat(5, 1fr);">
                             <h3>ID</h3>
                             <h3>title</h3>
                             <h3>Credit Hours</h3>
