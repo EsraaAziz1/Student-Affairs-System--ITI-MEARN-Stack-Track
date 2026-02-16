@@ -18,8 +18,7 @@ let studentDiv = document.getElementsByClassName("StudentForm")[0];
 let InstructorDiv = document.getElementsByClassName("InstructorForm")[0];
 let CourseDiv = document.getElementsByClassName("CourseForm")[0];
 let EmployeeDiv = document.getElementsByClassName("EmployeeForm")[0];
-let entitydiv = document.getElementsByClassName("entity")[0];
-let mainDiv = document.getElementsByClassName("main")[0];
+
 mainSelect.addEventListener("change", function () {
   if (mainSelect.value == "Student") {
     EmployeeDiv.style.display = "none";

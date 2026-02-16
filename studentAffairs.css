@@ -86,6 +86,7 @@ section .forms,
 }
 
 .header {
+  opacity: 0;
   padding: 10px;
   margin: auto;
 }

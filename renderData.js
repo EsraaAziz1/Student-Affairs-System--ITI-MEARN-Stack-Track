@@ -17,6 +17,7 @@ function reanderEmployeeData(EmployeeInfo) {
                             <h3>Role</h3>
                             <h3>Edit</h3>
                             <h3>Delete</h3></div>`;
+  document.getElementsByClassName("header")[0].style.opacity = 1;
   for (let index = 0; index < EmployeeInfo.length; index++) {
     EntityTable.innerHTML += `
                     <div class="content">
@@ -37,6 +38,7 @@ function reanderInstructorData(InstructorInfo) {
                             <h3>Edit</h3>
                             <h3>Delete</h3>
                     </div>`;
+  document.getElementsByClassName("header")[0].style.opacity = 1;
   for (let index = 0; index < InstructorInfo.length; index++) {
     EntityTable.innerHTML += `
                     <div class="content">
@@ -54,9 +56,10 @@ function renderStudentData(StudentInfo, coursesInfo, EmployeeInfo) {
                             <h3>Name</h3>
                             <h3>Email</h3>
                             <h3>Courses</h3>
-                            <h3>Advisor Name </h3>
+                            <h3>Advisor Name</h3>
                             <h3>Edit</h3>
                             <h3>Delete</h3></div>`;
+  document.getElementsByClassName("header")[0].style.opacity = 1;
   for (let i = 0; i < StudentInfo.length; i++) {
     EntityTable.innerHTML += `
     <div class="content">
@@ -80,12 +83,13 @@ function renderStudentData(StudentInfo, coursesInfo, EmployeeInfo) {
 function reanderCoursesData(coursesInfo) {
   EntityTable.innerHTML = `<div class="header">
                             <h3>ID</h3>
-                            <h3>title</h3>
+                            <h3>Title</h3>
                             <h3>Credit Hours</h3>
                             <h3>Instructor Name</h3>
                             <h3>Edit</h3>
                             <h3>Delete</h3>
                     </div>`;
+  document.getElementsByClassName("header")[0].style.opacity = 1;
   for (let index = 0; index < coursesInfo.length; index++) {
     EntityTable.innerHTML += `<div class="content">
                         <p>${coursesInfo[index].id}</p>
