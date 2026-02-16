@@ -42,7 +42,6 @@ section {
   margin: auto;
 }
 section div {
- 
   background-color: #e5ecf3;
   padding: 3px;
 }
@@ -79,14 +78,15 @@ section .forms,
   border: none;
   border-radius: 3px;
 }
-.edit:hover , .delete:hover{
-   cursor: pointer;
+.edit:hover,
+.delete:hover {
+  cursor: pointer;
 }
 .header {
   opacity: 0;
   padding: 10px;
   margin: auto;
-   display: grid;
+  display: grid;
   /* grid-template-columns: 10px repeat(6, 2fr); */
   grid-template-rows: repeat(7, auto);
   justify-content: space-between;
@@ -101,16 +101,11 @@ section .forms,
   grid-template-rows: repeat(7, auto);
   justify-content: space-between;
   column-gap: 30px;
-   row-gap: 3px;
+  row-gap: 3px;
 }
 .content select {
   width: 210px;
 }
-
-<<<<<<< Updated upstream
-/* ////////////////section2//////////////// */
-=======
-
 
 /* ////////////////Editing Form//////////////// */
 
@@ -146,7 +141,6 @@ section .forms,
   background-color: #e5ecf3;
   visibility: hidden;
   /* opacity: 0; */
-
 }
 .InstructorForm {
   border: 1px solid black;
@@ -157,7 +151,6 @@ section .forms,
   background-color: #e5ecf3;
   visibility: hidden;
   /* opacity: 0; */
-
 }
 
 .entity {
@@ -197,6 +190,3 @@ h1 {
   padding: 5px;
   margin: 10px auto;
 }
-
-
->>>>>>> Stashed changes

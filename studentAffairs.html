@@ -14,30 +14,41 @@
         <li>Employees</li>
       </ul>
     </nav>
+    <!--header-->
 
     <br /><br /><br /><br />
+    <!-- /////////////////////////////  Search&Paginate Section ////////////////////////////// -->
     <section>
       <sec class="forms">
         <form action="">
           <select name="Paginates" id="SelectPaginate">
-            <option value="">10</option>
-            <option value="">25</option>
-            <option value="">50</option>
-            <option value="">75</option>
-            <option value="">100</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="75">75</option>
+            <option value="100">100</option>
           </select>
-          <label>Entries per page</label>
+          <label>Entries pre page</label>
         </form>
         <form action="">
           <label for="">Search: </label>
           <input type="search" name="" id="search_data" />
+          <label for="" id="errorSearch"></label>
         </form>
       </sec>
       <br />
       <br />
       <sec class="EntityTable">
-        <!-- <div class="header"></div> -->
-        <!-- <div class="content">
+        <!-- <div class="header">
+                <h3>stID</h3>
+                <h3>stName</h3>
+                <h3>Age</h3>
+                <h3>stCourses</h3>
+                <h3>advisorId</h3>
+                <h3>Edit</h3>
+                <h3>Delete</h3>
+            </div>
+            <div class="content">
                 <p>st1</p>
                 <p>StN</p>
                 <p>stA</p>
@@ -86,8 +97,107 @@
     </section>
 
     <section class="AddBTN">
-      <input type="button" value="Add New Data" class="addnew" />
+      <input
+        type="button"
+        value="Add New Data"
+        style="
+          height: 30px;
+          width: 150px;
+          background-color: #6cbdc1;
+          border: none;
+          border-radius: 5px;
+        "
+      />
     </section>
+
+    <!-- ////////////////////////////////////////////////////////Editing form ///////////////////////////////// -->
+
+    <br /><br />
+
+    <!-- ///////////////////////////////////Edit Employee Info////////////////////////////////////////// -->
+
+    <div class="EmployeeForm">
+      <h1>Edit Employee Data</h1>
+      <form action="">
+        <label for="id">ID</label>
+        <input type="number" name="id" class="ID" />
+
+        <label for="name">Name</label>
+        <input type="text" name="name" class="Name" />
+
+        <label for="role">Role</label>
+        <input type="text" name="role" class="Role" />
+
+        <input type="button" class="savedata" value="Save Data" />
+        <!-- <button class="savedata">Save Data</button> -->
+      </form>
+    </div>
+
+    <!-- ///////////////////////////////////Edit Instructor Info////////////////////////////////////////// -->
+    <div class="InstructorForm">
+      <h1>Edit Instructor Data</h1>
+      <form action="">
+        <label for="id">ID</label>
+        <input type="number" name="id" class="ID" />
+
+        <label for="instructor">Instructor Name</label>
+        <input type="text" name="instructor" class="Name_Instructor" />
+
+        <label for="department">Department</label>
+        <input type="text" name="department" class="Department" />
+
+        <input type="button" class="savedata" value="Save Data" />
+      </form>
+    </div>
+
+    <!-- ///////////////////////////////////Edit Course Info////////////////////////////////////////// -->
+
+    <div class="CourseForm">
+      <h1>Edit Course Data</h1>
+      <form action="">
+        <label for="id">ID</label>
+        <input type="number" name="id" class="Id" />
+
+        <label for="title">Title</label>
+        <input type="text" name="title" class="title" />
+
+        <label for="creditHours">Credit Hours</label>
+        <input type="number" name="creditHours" class="creditHours" />
+
+        <label for="instructor">Instructor Name</label>
+        <input type="text" name="instructor" class="NameInstructor" />
+
+        <input type="button" class="savedata" value="Save Data" />
+      </form>
+    </div>
+
+    <!-- ///////////////////////////////////Edit Student Info////////////////////////////////////////// -->
+
+    <div class="StudentForm">
+      <h1>Edit Student Data</h1>
+      <form action="">
+        <label for="id">ID</label>
+        <input type="number" name="id" class="stdID" />
+        <label for="name">Name</label>
+        <input type="text" name="name" class="StdName" />
+        <label for="email">Email</label>
+        <input type="email" name="email" class="stdEmail" />
+        <label for="advisor">Advisor Name</label>
+        <input type="text" name="advisor" class="EmpOfStd" />
+        <br />
+        <label>Courses </label>
+        <br />
+        <label for="course1">first Courses</label>
+        <select name="course1" class="crs"></select>
+        <br />
+        <label for="course2">2nd Courses</label>
+        <select name="course2" class="crs2"></select>
+        <br />
+        <label for="course3">3th Courses</label>
+        <select name="course3" class="crs3"></select>
+        <input type="button" class="savedata" value="Save Data" />
+      </form>
+    </div>
 
     <script src="./Classes Modules/allModule.js" type="module"></script>
     <script src="Functional component/AddButton.js"></script>
