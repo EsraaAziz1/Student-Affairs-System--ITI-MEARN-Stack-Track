@@ -38,7 +38,7 @@ import {
   deleteInstructorData,
   deleteEmployeeData,
 } from "../Functional component/Delete.js";
-import { paginatePage } from "../Functional component/Paginate.js";
+
 
 let employee = new Employee();
 let EmployeeInfo = await employee.fetchData();
@@ -60,13 +60,16 @@ entity.forEach((ent) => {
     console.log(e.target.innerHTML);
     let showTableOfEntity = e.target.innerHTML;
     if (showTableOfEntity === "Employees") {
+
       reanderEmployeeData(EmployeeInfo);
       searching_by_employee(EmployeeInfo);
       getHeaderEmployeeData(EntityTable, flag);
       paginatePage_Employee(EmployeeInfo);
       update_Employee();
       deleteEmployeeData();
+
     } else if (showTableOfEntity === "Instructors") {
+
       EntityTable.innerHTML = "";
       reanderInstructorData(InstructorInfo);
       searching_by_Instructor(InstructorInfo);
@@ -74,7 +77,9 @@ entity.forEach((ent) => {
       paginatePage_Instructor(InstructorInfo);
       update_Instructor();
       deleteInstructorData();
+
     } else if (showTableOfEntity === "Students") {
+
       EntityTable.innerHTML = "";
       renderStudentData(StudentInfo, coursesInfo, EmployeeInfo);
       searching_by_Student(StudentInfo, EmployeeInfo, coursesInfo);
@@ -82,7 +87,9 @@ entity.forEach((ent) => {
       paginatePage_Student(StudentInfo);
       update_Student();
       deleteStudentData();
+
     } else if (showTableOfEntity === "Courses") {
+
       EntityTable.innerHTML = "";
       reanderCoursesData(coursesInfo);
       searching_by_Courses(coursesInfo, InstructorInfo);
@@ -90,6 +97,7 @@ entity.forEach((ent) => {
       paginatePage_Courses(coursesInfo);
       update_Courses();
       deleteCourseData();
+      
     }
   });
 });

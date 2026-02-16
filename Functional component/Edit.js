@@ -19,8 +19,6 @@ let InstructorForm = document.querySelector('.InstructorForm')
 ///////////////////////////// Entity Employee Update //////////////////////////
 
 function update_Employee() {
-
-
     let IdEmp = document.querySelector('.ID');
     let Name = document.querySelector('.Name');
     let Role = document.querySelector('.Role');
@@ -42,6 +40,7 @@ function update_Employee() {
             // console.log(e.target.parentElement.children[2].innerHTML)
             let ContentData = e.target.parentElement;
             IdEmp.value = ContentData.children[0].innerHTML;
+            IdEmp.value = ContentData.children[0].innerHTML;
             Name.value = ContentData.children[1].innerHTML;
             Role.value = ContentData.children[2].innerHTML;
 
@@ -61,6 +60,7 @@ function update_Employee() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 id: IdEmp.value,
+                id: IdEmp.value,
                 name: Name.value,
                 role: Role.value
             })
@@ -74,7 +74,6 @@ function update_Employee() {
 
 ///////////////////////////// Entity Instructor Update //////////////////////////
 function update_Instructor() {
-
 
     let InsID = document.querySelector('.InsID');
     let Name_Instructor = document.querySelector('.Name_Instructor');
@@ -96,6 +95,8 @@ function update_Instructor() {
             let ContentData = e.target.parentElement;
             console.log(ContentData.children[0].innerHTML)
             InsID.value = ContentData.children[0].innerHTML;
+            console.log(ContentData.children[0].innerHTML)
+            InsID.value = ContentData.children[0].innerHTML;
             Name_Instructor.value = ContentData.children[1].innerHTML;
             Department.value = ContentData.children[2].innerHTML;
         }
@@ -110,6 +111,7 @@ function update_Instructor() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 id: InsID.value,
+                id: InsID.value,
                 name: Name_Instructor.value,
                 department: Department.value
             })
@@ -122,7 +124,9 @@ function update_Instructor() {
 
 ///////////////////////////// Entity Student Update //////////////////////////
 
+
 function update_Student() {
+
 
 
     let stdID = document.querySelector('.stdID');
@@ -154,6 +158,9 @@ function update_Student() {
             StdName.value = ContentData.children[1].innerHTML;
             stdEmail.value = ContentData.children[2].innerHTML;
             EmpOfStd.value = ContentData.children[4].innerHTML;
+            fetchNameofCrs(course1)
+            fetchNameofCrs(course2)
+            fetchNameofCrs(course3)
             fetchNameofCrs(course1)
             fetchNameofCrs(course2)
             fetchNameofCrs(course3)
@@ -199,8 +206,11 @@ function update_Student() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     id: stdID.value,
+                    id: stdID.value,
                     name: StdName.value,
                     email: stdEmail.value,
+                    courses: [crs1, crs2, crs3],
+                    advisorId: idEMP,
                     courses: [crs1, crs2, crs3],
                     advisorId: idEMP,
 
@@ -245,9 +255,11 @@ function update_Courses() {
             creditHours.value = ContentData.children[2].innerHTML;
             NameInstructor.value = ContentData.children[3].innerHTML;
             instructorId = await Instructor.getIdOfInstructorbyname(ContentData.children[3].innerHTML, dataINSFetch);
+            instructorId = await Instructor.getIdOfInstructorbyname(ContentData.children[3].innerHTML, dataINSFetch);
             console.log("Instructor ID after fetch:", instructorId);
             department_of_Instructor = ContentData.children[1].innerHTML;
         }
+
 
 
     })
@@ -265,7 +277,6 @@ function update_Courses() {
         }
         let instructorNewId = await Instructor.getIdOfInstructorbyname(nameINS, dataINSFetch);
         // console.log("Instructor New ID:", instructorNewId);
-
         if (instructorNewId) {
             await updateCourse(instructorNewId);
         }
@@ -283,6 +294,7 @@ function update_Courses() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     id: CrsId.value,
+                    id: CrsId.value,
                     title: depNameINS,
                     creditHours: creditHours.value,
                     instructorId: idINS
@@ -291,22 +303,10 @@ function update_Courses() {
                 .then(res => res.json())
                 .then(console.log);
         }
-        // fetch(`http://localhost:3000/courses/${Id.value}`, {
-        //     method: 'PUT', /* or PATCH */
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({
-        //         id: Id.value,
-        //         title: Title.value,
-        //         creditHours: creditHours.value,
-        //         instructorId: instructorId,
-        //     })
-        // })
-        //     .then(res => res.json())
-        //     .then(console.log);
-    })
-
+       
+    
+})
 }
-
 
 //////////////////////////////mini function////////////////////////////
 
@@ -317,6 +317,7 @@ async function editName_ofIns_fromCrs(id, nameINS, crsName) {
         body: JSON.stringify({
             name: nameINS,
             department: crsName
+          
         })
     })
         .then(res => res.json())
@@ -325,7 +326,6 @@ async function editName_ofIns_fromCrs(id, nameINS, crsName) {
 
 function fetchNameofCrs(selectOptionCrs) {
     selectOptionCrs.innerHTML = `<option value="">Select Course</option>`;
-
     for (let i = 0; i < dataCRSFetch.length; i++) {
         selectOptionCrs.innerHTML += `
             <option value="${dataCRSFetch[i].id}">

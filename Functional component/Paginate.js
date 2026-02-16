@@ -198,7 +198,7 @@ function show_dataRecord_Courses(courseData, InstructorInfo) {
                         <p>${courseData[index].creditHours}</p>
                         <p>${Instructor.getNameOfInstructor(courseData[index].instructorId, InstructorInfo)}</p>
                         <input type="button" value="Edit"  class ="edit">
-                        <input type="button" value="Delete" class ="delete"> </div>`;
+                        <input type="button" value="Delete" class ="deleteCourse"> </div>`;
     }
 }
 
@@ -237,7 +237,7 @@ function show_dataRecord_Employee(EmployeeInfo) {
                         <p>${EmployeeInfo[index].name}</p>
                         <p>${EmployeeInfo[index].role}</p>
                         <input type="button" value="Edit" class ="edit">
-                        <input type="button" value="Delete" class="delete">
+                        <input type="button" value="Delete" class="deleteEmployee">
                     </div>`;
   }
 }
@@ -275,7 +275,7 @@ function show_dataRecord_Instructor(InstructorInfo) {
                         <p>${InstructorInfo[index].name}</p>
                         <p>${InstructorInfo[index].department}</p>
                         <input type="button" value="Edit" class ="edit">
-                        <input type="button" value="Delete" class="delete">
+                        <input type="button" value="Delete" class="DeleteInstructor">
                     </div>`;
   }
 }
@@ -284,7 +284,7 @@ function show_header_Ins() {
    EntityTable.innerHTML = `<div class="header" style="grid-template-columns: 10px repeat(4, 1fr);">
                             <h3>ID</h3>
                             <h3>Name</h3>
-                            <h3>Role</h3>
+                            <h3>Depaetment</h3>
                             <h3>Edit</h3>
                             <h3>Delete</h3></div>`;
   document.getElementsByClassName("header")[0].style.opacity = 1;
@@ -322,7 +322,7 @@ function renderPage_Instructor() {
         </p>
         <p>${ employee.getNameOfEmployee(StudentInfo[i].advisorId, EmployeeInfo)}</p>
         <input type="button" class="edit" value="Edit"/>
-        <input type="button" class="delete" value="Delete"/>
+        <input type="button" class="deleteStudent" value="Delete"/>
         </div>`;
   }
 }

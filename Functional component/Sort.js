@@ -149,6 +149,7 @@ export function getHeaderInstructorData(EntityTable, flag) {
 
 export function getHeaderEmployeeData(EntityTable, flag) {
   let head = EntityTable.children[0].children;
+  console.log(head)
   Array.from(head).forEach(function (Element) {
     Element.addEventListener("click", function (e) {
       if (e.target.innerHTML === "ID") {

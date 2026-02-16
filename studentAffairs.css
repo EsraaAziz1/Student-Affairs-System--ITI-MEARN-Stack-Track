@@ -145,6 +145,8 @@ section .forms,
   background-color: #e5ecf3;
   display: none;
   /* visibility: hidden; */
+  display: none;
+  /* visibility: hidden; */
   /* visibility: visible; */
   /* opacity: 0; */
 }
@@ -177,6 +179,8 @@ section .forms,
   transform: translate(-50%, -50%);
   z-index: 1000;
   background-color: #e5ecf3;
+  display: none;
+  /* visibility: hidden; */
   display: none;
   /* visibility: hidden; */
   /* opacity: 0; */

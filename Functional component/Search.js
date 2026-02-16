@@ -33,10 +33,8 @@ function searching_by_employee(instance_of_employee) {
                         <p>${search_data[index].id}</p>
                         <p>${search_data[index].name}</p>
                         <p>${search_data[index].role}</p>
-                        <input type="button" value="Edit" 
-                            style=" background-color: #05498d; color: white; border: none; border-radius: 3px;">
-                        <input type="button" value="Delete"
-                            style=" background-color: #042d3a;color: white; border: none; border-radius: 3px;">
+                        <input type="button" value="Edit" class="edit">
+                        <input type="button" value="Delete" class="deleteEmployee">
                     </div>  
             `
 
@@ -84,7 +82,7 @@ function searching_by_employee(instance_of_employee) {
                         </p>
                         <p>${employee.getNameOfEmployee(search_data[index].advisorId, instance_of_Employee)}</p>
                         <input type="button" class="edit" value="Edit"/>
-                        <input type="button" class="delete" value="Delete"/>
+                        <input type="button" class="deleteStudent" value="Delete"/>
                         </div>`;
 
         }
@@ -116,10 +114,8 @@ function searching_by_employee(instance_of_employee) {
                         <p>${search_data[index].id}</p>
                         <p>${search_data[index].name}</p>
                         <p>${search_data[index].department}</p>
-                        <input type="button" value="Edit"
-                            style=" background-color: #05498d; color: white; border: none; border-radius: 3px;">
-                        <input type="button" value="Delete"
-                            style=" background-color: #042d3a;color: white; border: none; border-radius: 3px;">
+                        <input type="button" value="Edit" class="edit">
+                        <input type="button" value="Delete" class="DeleteInstructor">
                     </div>
               `;
        }
@@ -153,10 +149,8 @@ function searching_by_employee(instance_of_employee) {
                         <p>${search_data[index].title}</p>
                         <p>${search_data[index].creditHours}</p>
                         <p>${Instructor.getNameOfInstructor(search_data[index].instructorId, instance_of_instructor)}</p>
-                        <input type="button" value="Edit"
-                            style=" background-color: #05498d; color: white; border: none; border-radius: 3px;">
-                        <input type="button" value="Delete"
-                            style=" background-color: #042d3a;color: white; border: none; border-radius: 3px;">
+                        <input type="button" value="Edit" class="edit">
+                        <input type="button" value="Delete" class="deleteCourse">
                     </div>
               `;
        }
