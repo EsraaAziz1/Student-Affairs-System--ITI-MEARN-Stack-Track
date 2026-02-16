@@ -79,7 +79,9 @@ section .forms,
   border-radius: 3px;
 }
 .edit:hover,
-.delete:hover {
+.delete:hover,
+.NextPage:hover,
+.PreviousPage:hover {
   cursor: pointer;
 }
 .header {
@@ -115,6 +117,11 @@ section .forms,
   padding: 50px;
   margin: auto;
   width: 500px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
   background-color: #e5ecf3;
   display: none;
   /* visibility: hidden; */
@@ -127,6 +134,11 @@ section .forms,
   padding: 50px;
   margin: auto;
   width: 500px;
+  position: absolute;
+  z-index: 1000;
+    top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #e5ecf3;
   display: none;
   /* visibility: hidden; */
@@ -140,6 +152,11 @@ section .forms,
   padding: 50px;
   margin: auto;
   width: 500px;
+  position: absolute;
+  z-index: 1000;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #e5ecf3;
   display: none;
   /* visibility: hidden; */
@@ -151,6 +168,11 @@ section .forms,
   padding: 50px;
   margin: auto;
   width: 500px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
   background-color: #e5ecf3;
   display: none;
   /* visibility: hidden; */
@@ -186,11 +208,14 @@ h1 {
   padding: 3px;
   margin: 5px;
 }
-.savedata {
+.savedataCourse , .savedataStudent ,.savedataInstructor ,.savedataEmployee{
   width: 100px;
   border-radius: 10px;
   background-color: #6cbdc1;
   border: none;
   padding: 5px;
   margin: 10px auto;
+}
+.savedataCourse:hover , .savedataStudent:hover ,.savedataInstructor:hover ,.savedataEmployee:hover{
+  cursor: pointer;
 }

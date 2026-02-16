@@ -4,13 +4,12 @@
       "id": "1",
       "name": "Omar Hassan",
       "email": "omar.hassan@university.edu",
-      "level": 1,
-      "advisorId": 3,
       "courses": [
-        1,
-        2,
-        3
-      ]
+        "10",
+        "16",
+        "17"
+      ],
+      "advisorId": "3"
     },
     {
       "id": "2",
@@ -40,25 +39,23 @@
       "id": "4",
       "name": "Nour El‑Din Khaled",
       "email": "nour.khaled@university.edu",
-      "level": 4,
-      "advisorId": 7,
       "courses": [
-        4,
-        5,
-        6
-      ]
+        "",
+        "11",
+        ""
+      ],
+      "advisorId": "7"
     },
     {
       "id": "5",
       "name": "Mariam Adel",
       "email": "mariam.adel@university.edu",
-      "level": 1,
-      "advisorId": 10,
       "courses": [
-        5,
-        6,
-        7
-      ]
+        "",
+        "",
+        ""
+      ],
+      "advisorId": "10"
     },
     {
       "id": "6",
@@ -76,13 +73,12 @@
       "id": "7",
       "name": "Habiba Mohamed",
       "email": "habiba.mohamed@university.edu",
-      "level": 3,
-      "advisorId": 8,
       "courses": [
-        7,
-        8,
-        9
-      ]
+        "",
+        "",
+        ""
+      ],
+      "advisorId": "8"
     },
     {
       "id": "8",
@@ -606,15 +602,15 @@
     },
     {
       "id": "2",
-      "title": "Object‑Oriented Programming",
-      "creditHours": 3,
-      "instructorId": 2
+      "title": "Object‑Oriented Programming(OOP)",
+      "creditHours": "3",
+      "instructorId": "2"
     },
     {
       "id": "3",
       "title": "Data Structures",
-      "creditHours": 3,
-      "instructorId": 3
+      "creditHours": "3",
+      "instructorId": "3"
     },
     {
       "id": "4",
@@ -722,7 +718,7 @@
   "employees": [
     {
       "id": "1",
-      "name": "Mr. Mostafa Nabil",
+      "name": "Mr. Mostafa Omar",
       "role": "Instructor"
     },
     {
@@ -751,9 +747,9 @@
       "role": "Student Affairs Admin"
     },
     {
+      "name": "Ms. Reham Nasr",
       "id": "7",
-      "name": "Ms. Reham Mohamed",
-      "role": "Graduate Studies Admin"
+      "role": "Instructor"
     },
     {
       "id": "8",
@@ -767,7 +763,7 @@
     },
     {
       "id": "10",
-      "name": "Mr. Hany Reda",
+      "name": "Mr. Ahmed Gomaa",
       "role": "Graduate Studies Officer"
     },
     {
@@ -824,18 +820,18 @@
   "instructors": [
     {
       "id": "1",
-      "name": "Dr. Hany El‑Sayed",
+      "name": "Dr. Ahmed El‑Sayed",
       "department": "Computer Science"
     },
     {
       "name": "Dr. Rania Adel",
-      "department": "Artificial Intelligence",
+      "department": "Object‑Oriented Programming(OOP)",
       "id": "2"
     },
     {
-      "id": "3",
-      "name": "Dr. Tarek Naguib",
-      "department": "Computer Science"
+      "name": "Dr. Tarek Ragab",
+      "department": "Data Structures",
+      "id": "3"
     },
     {
       "id": "4",
@@ -868,8 +864,8 @@
     },
     {
       "id": "10",
-      "name": "Dr. Heba Mostafa",
-      "department": "Web & Mobile"
+      "name": "Mr. Hany Reda",
+      "department": "Graduate Studies Officer"
     },
     {
       "id": "11",

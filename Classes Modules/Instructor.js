@@ -22,7 +22,7 @@ export class Instructors extends Courses {
     for (let i = 0; i < data.length; i++) {
       if (data[i].name == name) return data[i].id;
     }
-    throw new Error("please enter the Instructor Name correctly");
+    // throw new Error("please enter the Instructor Name correctly");
   }
   duplicateID(id, data) {
     for (let i = 0; i < data.length; i++) {

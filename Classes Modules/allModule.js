@@ -26,7 +26,12 @@ import {
     getHeaderInstructorData,
     getHeaderEmployeeData,
 } from "../Functional component/Sort.js";
-import { paginatePage } from "../Functional component/Paginate.js";
+import { 
+    paginatePage_Courses, 
+    paginatePage_Employee ,
+    paginatePage_Instructor,
+    paginatePage_Student
+} from "../Functional component/Paginate.js";
 
 let employee = new Employee();
 let EmployeeInfo = await employee.fetchData();
@@ -48,32 +53,39 @@ entity.forEach((ent) => {
         console.log(e.target.innerHTML);
         let showTableOfEntity = e.target.innerHTML;
         if (showTableOfEntity === "Employees") {
+
             reanderEmployeeData(EmployeeInfo);
             searching_by_employee(EmployeeInfo);
-            update_Employee();
             getHeaderEmployeeData(EntityTable, flag);
+            paginatePage_Employee(EmployeeInfo);
+            update_Employee();
             
         } else if (showTableOfEntity === "Instructors") {
 
             EntityTable.innerHTML = "";
             reanderInstructorData(InstructorInfo);
             searching_by_Instructor(InstructorInfo);
-            update_Instructor();
             getHeaderInstructorData(EntityTable, flag);
+            paginatePage_Instructor(InstructorInfo);
+             update_Instructor();
 
         } else if (showTableOfEntity === "Students") {
 
+            EntityTable.innerHTML = "";
             renderStudentData(StudentInfo, coursesInfo, EmployeeInfo);
             searching_by_Student(StudentInfo, EmployeeInfo, coursesInfo);
-            update_Student();
             getHeaderStudentData(EntityTable, flag);
+            paginatePage_Student(StudentInfo);
+            update_Student();
 
         } else if (showTableOfEntity === "Courses") {
+
             EntityTable.innerHTML = "";
             reanderCoursesData(coursesInfo);
             searching_by_Courses(coursesInfo, InstructorInfo);
-            update_Courses();
             getHeaderCourseData(EntityTable, flag);
+            paginatePage_Courses(coursesInfo )
+            update_Courses();
         }
     });
 });
