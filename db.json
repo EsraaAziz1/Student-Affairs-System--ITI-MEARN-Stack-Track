@@ -1,5 +1,16 @@
 {
   "students": [
+     {
+      "id": "1",
+      "name": "Nagy Ashref",
+      "email": "nagy.ashraf@university.edu",
+      "courses": [
+        "9",
+        "1",
+        "5"
+      ],
+      "advisorId": "1"
+    },
     {
       "id": "2",
       "name": "Salma Khaled",
@@ -62,9 +73,9 @@
       "name": "Habiba Mohamed",
       "email": "habiba.mohamed@university.edu",
       "courses": [
-        "",
-        "",
-        ""
+        "5",
+        "7",
+        "8"
       ],
       "advisorId": "8"
     },
@@ -575,6 +586,12 @@
   ],
   "courses": [
     {
+      "id": "1",
+      "title": "TypeScript",
+      "creditHours": "6",
+      "instructorId": "5"
+    },
+    {
       "id": "2",
       "title": "Object‑Oriented Programming(OOP)",
       "creditHours": "3",
@@ -687,12 +704,6 @@
       "title": "Human‑Computer Interaction",
       "creditHours": 2,
       "instructorId": 20
-    },
-    {
-      "id": "1",
-      "title": "Client side Technology",
-      "creditHours": "5",
-      "instructorId": null
     }
   ],
   "employees": [
@@ -704,6 +715,11 @@
     {
       "id": "2",
       "name": "Ms. Salma El‑Kady",
+      "role": "Admissions Officer"
+    },
+     {
+      "id": "3",
+      "name": "Ms. Arwo Mohamed",
       "role": "Admissions Officer"
     },
     {
