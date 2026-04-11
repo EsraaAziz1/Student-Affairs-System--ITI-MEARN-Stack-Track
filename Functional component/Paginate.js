@@ -107,7 +107,7 @@ function paginatePage_Employee( EmployeeInfo) {
 
 }
 
-///////////////////////////PaginatePage Instructor//////////////////////////////
+/////////////////////////// PaginatePage Instructor //////////////////////////////
 function paginatePage_Instructor( InstructorInfo) {
     
     show_header_Ins();

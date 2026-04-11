@@ -52,14 +52,14 @@ studentDiv
   .getElementsByClassName("savedata")[0]
   .addEventListener("click", function () {
     addStudentData();
-    location.href = "../studentAffairs.html";
+    location.href = "../index.html";
   });
 
 InstructorDiv.getElementsByClassName("savedata")[0].addEventListener(
   "click",
   function () {
     addInstructorData();
-    location.href = "../studentAffairs.html";
+    location.href = "../index.html";
   },
 );
 
@@ -67,7 +67,7 @@ EmployeeDiv.getElementsByClassName("savedata")[0].addEventListener(
   "click",
   function () {
     addEmployeeData();
-    location.href = "../studentAffairs.html";
+    location.href = "../index.html";
   },
 );
 
@@ -75,7 +75,7 @@ CourseDiv.getElementsByClassName("savedata")[0].addEventListener(
   "click",
   function () {
     addCoursesData();
-    location.href = "../studentAffairs.html";
+    location.href = "../index.html";
   },
 );
 

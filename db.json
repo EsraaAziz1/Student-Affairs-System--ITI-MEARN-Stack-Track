@@ -1,13 +1,13 @@
 {
   "students": [
-     {
+    {
       "id": "1",
       "name": "Nagy Ashref",
       "email": "nagy.ashraf@university.edu",
       "courses": [
-        "9",
-        "1",
-        "5"
+        "",
+        "6",
+        ""
       ],
       "advisorId": "1"
     },
@@ -417,15 +417,14 @@
     },
     {
       "id": "37",
-      "name": "Talia Jamal",
-      "email": "talia.jamal@university.edu",
-      "level": 1,
-      "advisorId": 13,
+      "name": "Talia Khaled",
+      "email": "talia.khaled@university.edu",
       "courses": [
-        17,
-        18,
-        19
-      ]
+        "",
+        "",
+        ""
+      ],
+      "advisorId": "13"
     },
     {
       "id": "38",
@@ -717,7 +716,7 @@
       "name": "Ms. Salma El‑Kady",
       "role": "Admissions Officer"
     },
-     {
+    {
       "id": "3",
       "name": "Ms. Arwo Mohamed",
       "role": "Admissions Officer"
@@ -769,7 +768,7 @@
     },
     {
       "id": "13",
-      "name": "Ms. Sherine Rashed",
+      "name": "Ms. Sherine Ahmed",
       "role": "Quality Assurance Specialist"
     },
     {
@@ -804,8 +803,8 @@
     },
     {
       "id": "20",
-      "name": "Mr. Adel Rashad",
-      "role": "Student Services Coordinator"
+      "name": "Nadine Moataz",
+      "role": "Studies Officer Admin"
     }
   ],
   "instructors": [
@@ -908,6 +907,11 @@
       "id": "20",
       "name": "Dr. Hazem Youssef",
       "department": "Human‑Computer Interaction"
+    },
+    {
+      "id": "21",
+      "name": "Dr. Arwa Ashraf",
+      "department": "C++"
     }
   ]
 }
